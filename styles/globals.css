@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.navbar {
+    margin-top: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.096);
+    width: 100vw;
+    min-height: 8vh;
+    padding: 1rem;
+    border-top: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.nabvar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    
+}
+#logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.video-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+ 
+}
