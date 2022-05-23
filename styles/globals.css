@@ -2,27 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+.white-color {
+    color: white;
+}
+.custom-font {
+    font-family: 'Cherishline Demo';
 
+}
 .navbar {
-    margin-top: 1.2rem;
+    margin-top: .8rem;
     background-color: rgba(0, 0, 0, 0.096);
     width: 100vw;
     min-height: 8vh;
-    padding: 1rem;
+    padding: .6rem;
     border-top: 1px solid rgb(255, 255, 255);
     border-bottom: 1px solid rgb(255, 255, 255);
+    z-index: 100;
 }
 
 .nabvar-content {
     display: flex;
     align-items: center;
+    letter-spacing: .7px;
     justify-content: space-between;
     color: white;
     
 }
 #logo {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     font-weight: bold;
+  
 }
 
 .video-container {
@@ -30,4 +39,11 @@
     height: 100%;
     overflow: hidden;
  
+}
+.braclet-video-cont {
+    width: 15rem;
+    aspect-ratio: 1/1.4;
+    overflow: hidden;
+    border-radius: 1rem;
+   
 }
