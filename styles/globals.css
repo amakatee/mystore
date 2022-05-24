@@ -137,6 +137,7 @@
 
 
 }
+
 .main-carousel {
     cursor: grab;
     transform: scale(1.1);
@@ -151,7 +152,7 @@
 }
 .main-inner-carousel {
     display: flex;
-    align-items: flex-start;
+
 
     width: 80vw;
 }
@@ -175,7 +176,16 @@
     .video-container {
         display: none;
     }
+    .carousel-section {
+        align-items: flex-end;
+    
+    }
     .main-carousel {
+        background-color: blue;
+        display: flex;
+        justify-content: flex-end;
+        transform: scale(1.6);
+        overflow: hidden;
         
      
   
