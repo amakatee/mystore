@@ -2,14 +2,15 @@ import React from 'react'
 import {motion} from 'framer-motion'
 import {useRef, useState, useEffect} from 'react'
 import Carousel from './../assets/Carousel'
+import TitleArrow from './../assets/TitleArrow'
 
 const SecondSection = () => {
    const images = [
-       'https://i.pinimg.com/564x/23/8c/e1/238ce1a2611002e93b9f499dd029047b.jpg',
-       'https://i.pinimg.com/564x/23/8c/e1/238ce1a2611002e93b9f499dd029047b.jpg',
-       'https://i.pinimg.com/564x/23/8c/e1/238ce1a2611002e93b9f499dd029047b.jpg',
-       'https://i.pinimg.com/564x/23/8c/e1/238ce1a2611002e93b9f499dd029047b.jpg',
-       'https://i.pinimg.com/564x/23/8c/e1/238ce1a2611002e93b9f499dd029047b.jpg'
+       'https://inej.s3.amazonaws.com/2_8KDEzbU.jpg?AWSAccessKeyId=AKIAXKBC4NRLRNTZZA7H&Signature=goBYLQd8Yik1SJ5bqf9SWTbHgRw%3D&Expires=1653410970',
+       'https://inej.s3.amazonaws.com/5.jpg?AWSAccessKeyId=AKIAXKBC4NRLRNTZZA7H&Signature=0krFAHJM1yEXa%2BCdx%2FOJ%2FOpn70I%3D&Expires=1653411038',
+       'https://inej.s3.amazonaws.com/IMG_3084_jpg.JPG?AWSAccessKeyId=AKIAXKBC4NRLRNTZZA7H&Signature=523nbt807rNQW5wt28K5X9vOBII%3D&Expires=1653411055',
+       'https://inej.s3.amazonaws.com/IMG_2911_2_083F1Bd.JPG?AWSAccessKeyId=AKIAXKBC4NRLRNTZZA7H&Signature=ghQhcVU5MOSyzDSRqW75g7pPoH8%3D&Expires=1653411185',
+       'https://inej.s3.amazonaws.com/IMG_2911_2_083F1Bd.JPG?AWSAccessKeyId=AKIAXKBC4NRLRNTZZA7H&Signature=ghQhcVU5MOSyzDSRqW75g7pPoH8%3D&Expires=1653411185'
 
 
    ]
@@ -17,16 +18,14 @@ const SecondSection = () => {
   return (
 
     <div className='carousel-section' >
+        
         <div className=' ml-[13vw] mt-[20vh]'>
-        <h1 className='title-text dark-color'>accessories</h1>
-        <div className='white-arrow w-[50px]'>
-          <svg viewBox="0 0 44 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill='#434343' fillRule="evenodd" clipRule="evenodd" d="M0 5.5H43V6.5H0V5.5Z"></path>
-          <path fill='#434343' d="M43.9447 5.90506L35.167 0.914272C35.051 0.848274 34.9381 1.00447 35.0394 1.09088L40.6984 5.91727C40.75 5.96124 40.7492 6.04024 40.6968 6.08323L35.0655 10.7047C34.9624 10.7893 35.0727 10.9477 35.19 10.8835L43.9431 6.09454C44.0182 6.05345 44.0191 5.94737 43.9447 5.90506Z"></path>
-        </svg>
+        <TitleArrow text='украшения' color="#434343" />
         </div>
+
+        <div>
+             <Carousel images={images} />
         </div>
-        {/* <Carousel images={images} /> */}
         
    
   </div>
