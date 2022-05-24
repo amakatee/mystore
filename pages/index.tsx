@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Navbar from './../components/Navbar'
-import MainPage from './../components/main/mainPage'
+import MainPage from './../components/main/MainPage' 
 import SecondSection from './../components/main/SecondSection'
 
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const mainPage = () => {
+const MainPage = () => {
   return (
     <div className='relative'>  
       <div className='image-main-container'>
@@ -29,4 +29,4 @@ const mainPage = () => {
   )
 }
 
-export default mainPage
+export default MainPage
