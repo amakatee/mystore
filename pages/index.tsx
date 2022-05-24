@@ -10,7 +10,7 @@ const Home: NextPage = () => {
       <main className="w-[100vw] min-h-[100vh]">
        <div className='relative'>  
         <div className='video-container'>
-          <video loop muted autoPlay>
+          <video loop muted autoPlay={true}>
             <source
             src='/backvideo.mp4'
             type='video/mp4'
