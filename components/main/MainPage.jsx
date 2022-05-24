@@ -15,7 +15,7 @@ const MainPage = () => {
             </source>
           </video>
         </div>
-        <div className='absolute bottom-[120px] left-[13vw]  flex flex-col items-start gap-.5 ' >
+        <div className='absolute bottom-[120px] left-[7vw]  flex flex-col items-start gap-.5 ' >
  
           <h1 className='text-white custom-font title-text mb-[10px]'>СМОТРЕТЬ</h1>
          <div className='white-arrow w-[50px]'>

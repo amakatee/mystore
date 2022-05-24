@@ -17,9 +17,9 @@ const SecondSection = () => {
 
   return (
 
-    <div className='carousel-section ml-[13vw]' >
+    <div className='carousel-section ml-[7vw]' >
         
-        <div className='  mt-[20vh]'>
+        <div className='flex items-center gap-5  mt-[20vh]'>
         <TitleArrow text='украшения' color="#434343" />
         </div>
 
