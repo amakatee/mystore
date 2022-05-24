@@ -3,7 +3,7 @@ import React from 'react'
 const TitleArrow = ({text, color}) => {
   return (
       <>
-    <h1 className='title-text dark-color'>{text}</h1>
+    <h1 className='title-text dark-color mb-[10px]'>{text}</h1>
     <div className='white-arrow w-[50px]'>
       <svg viewBox="0 0 44 11" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path fill={color} fillRule="evenodd" clipRule="evenodd" d="M0 5.5H43V6.5H0V5.5Z"></path>

@@ -15,9 +15,9 @@ const MainPage = () => {
             </source>
           </video>
         </div>
-        <div className='absolute bottom-[120px] left-[45px]  flex flex-col items-start gap-.5 ' >
+        <div className='absolute bottom-[120px] left-[13vw]  flex flex-col items-start gap-.5 ' >
  
-          <h1 className='text-white custom-font title-text'>СМОТРЕТЬ</h1>
+          <h1 className='text-white custom-font title-text mb-[10px]'>СМОТРЕТЬ</h1>
          <div className='white-arrow w-[50px]'>
           <svg viewBox="0 0 44 11" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill='#fff' fillRule="evenodd" clipRule="evenodd" d="M0 5.5H43V6.5H0V5.5Z"></path>

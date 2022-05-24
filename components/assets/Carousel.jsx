@@ -16,6 +16,7 @@ const Carousel = ({images}) => {
         <motion.div  
         className='main-inner-carousel'
         drag='x'
+        dragDirectionLock
         dragConstraints={{right:0, left: -width}}
         >
 
