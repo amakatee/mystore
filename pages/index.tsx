@@ -5,12 +5,13 @@ import Navbar from './../components/Navbar'
 const Home: NextPage = () => {
   return (
     <div className="">
-      <Navbar />
+     
 
       <main className="w-[100vw] min-h-[100vh]">
-       <div className='relative'>  
+      <Navbar />
+     <div className='relative'>  
         <div className='video-container'>
-          <video loop muted autoPlay={true}>
+          <video loop muted autoPlay={true} className="video-main">
             <source
             src='/backvideo.mp4'
             type='video/mp4'
@@ -19,7 +20,7 @@ const Home: NextPage = () => {
           </video>
         </div>
         <div className='absolute bottom-20 left-10  flex flex-col items-center gap-.5 ' >
-          <h1 className='text-white custom-font text-[2rem]'>Shop Now</h1>
+          <h1 className='text-white  custom-font title-text'>СМОТРЕТЬ</h1>
          <div className='white-arrow w-[50px]'>
           <svg viewBox="0 0 44 11" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill='#fff' fill-rule="evenodd" clip-rule="evenodd" d="M0 5.5H43V6.5H0V5.5Z"></path>
@@ -31,24 +32,19 @@ const Home: NextPage = () => {
         </div>
         <div className='w-[100vw] min-h-[100vh] grid content-center'>
           <div className='braclet-video-cont' >
-          <video loop muted autoPlay className='video'>
-            <source
-            src='/bracelet.mp4'
-            type='video/mp4'
-            >
-            </source>
-          </video>
+         
           </div>
           <h1>accessories</h1>
          
         </div>
         
-       
+    
       </main>
 
       <footer className="">
        Footer
       </footer>
+      
     </div>
   )
 }
