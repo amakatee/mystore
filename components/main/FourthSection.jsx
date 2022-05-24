@@ -8,14 +8,14 @@ const FourthSection = () => {
         <div className='fourh-grid'>
             <div className='fourth-img-cont-1'>
                 <img
-                 src='https://inej.s3.amazonaws.com/3_03iqiQF.jpg?AWSAccessKeyId=AKIAXKBC4NRLRNTZZA7H&Signature=4yqlo9IfFY%2FL4X1qm2dX9QaptC0%3D&Expires=1653419466'
+                 src='https://i.pinimg.com/564x/4b/db/f9/4bdbf9ef4d79b33314beb25345abda32.jpg'
                 >
                 </img>
 
             </div>
             <div className='fourth-img-cont-2'>
                 <img
-                 src='https://inej.s3.amazonaws.com/3_03iqiQF.jpg?AWSAccessKeyId=AKIAXKBC4NRLRNTZZA7H&Signature=4yqlo9IfFY%2FL4X1qm2dX9QaptC0%3D&Expires=1653419466'
+                 src='https://i.pinimg.com/564x/46/7b/9b/467b9bfdcb50c614524471a202ecf505.jpg'
                 >
                 </img>
 

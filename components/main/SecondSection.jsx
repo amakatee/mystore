@@ -6,11 +6,11 @@ import TitleArrow from './../assets/TitleArrow'
 
 const SecondSection = () => {
    const images = [
-       'https://inej.s3.amazonaws.com/4_2ozs3yf.jpg?AWSAccessKeyId=AKIAXKBC4NRLRNTZZA7H&Signature=hmlQ%2FOOXhSvwA20HO9XzjViB7W8%3D&Expires=1653415649',
-       'https://inej.s3.amazonaws.com/IMG_3084_jpg.JPG?AWSAccessKeyId=AKIAXKBC4NRLRNTZZA7H&Signature=7pXlvqtccsRPJZx%2BRzGyoWXkauA%3D&Expires=1653415945',
-       'https://inej.s3.amazonaws.com/IMG_3084_jpg.JPG?AWSAccessKeyId=AKIAXKBC4NRLRNTZZA7H&Signature=523nbt807rNQW5wt28K5X9vOBII%3D&Expires=1653411055',
-       'https://inej.s3.amazonaws.com/IMG_2911_2_083F1Bd.JPG?AWSAccessKeyId=AKIAXKBC4NRLRNTZZA7H&Signature=ghQhcVU5MOSyzDSRqW75g7pPoH8%3D&Expires=1653411185',
-       'https://inej.s3.amazonaws.com/IMG_2911_2_083F1Bd.JPG?AWSAccessKeyId=AKIAXKBC4NRLRNTZZA7H&Signature=ghQhcVU5MOSyzDSRqW75g7pPoH8%3D&Expires=1653411185'
+       'https://i.pinimg.com/564x/51/95/60/519560992ac0284dcb03c15c202c16d2.jpg',
+       'https://i.pinimg.com/564x/00/2e/ec/002eec7d8058600da1ddba54ad26df14.jpg',
+       'https://i.pinimg.com/564x/a0/e6/d6/a0e6d688bafd0a6e4450faf08f784c65.jpg',
+       'https://i.pinimg.com/736x/22/34/31/2234315ebe8d26b1928a7b4dd05993fd.jpg',
+       'https://i.pinimg.com/564x/e8/26/e0/e826e0ec646e1eef37a26654d74902ea.jpg'
 
 
    ]
