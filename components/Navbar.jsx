@@ -9,11 +9,7 @@ const Navbar = () => {
                 <div className='flex flex-col justify-between gap-1'>
                     <span className='w-[28px] h-[1.4px] bg-[#fff]'></span>
                     <span className='w-[28px] h-[1.4px] bg-[#fff]'></span>
-                {/* <svg viewBox="0 0 100 100" width="33" height="20"fill='#fff' >
-                    <rect width="400" height="8"  ></rect>
-                    <rect y="30" width="400" height="8"></rect>
-                   <rect y="30" width="400" height="8"></rect>
-                </svg> */}
+            
                 </div>
                 <h1 id='logo' className='custom-font'>иней</h1>
                 

@@ -5,6 +5,9 @@
 .white-color {
     color: white;
 }
+.dark-color {
+    color: #434343;
+}
 .custom-font {
     font-family: 'Helvetica Neue';
 
@@ -62,4 +65,123 @@
     overflow: hidden;
     border-radius: 1rem;
    
+}
+
+
+/* Main Caroosel */
+.carousel-section {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9rem;
+    min-height: 100vh;
+   
+   
+
+
+ 
+
+    
+}
+.main-carousel {
+    cursor: grab;
+    overflow: hidden;
+
+}
+.main-inner-carousel {
+    display: flex;
+    align-items: flex-start;
+    
+   
+}
+.main-item {
+    
+  
+
+    padding: .5rem;
+
+    /* min-height: 20%;
+    min-width: 29%;
+    padding: 10px; */
+
+}
+.main-img-cont {
+    width: 9rem;
+   
+   
+}
+.main-img-cont img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    pointer-events: none;
+
+}
+/* Main Caroosel  Ends*/
+
+@media(max-width: 45em){
+    .image-main-container {
+        display: none;
+    }
+   
+    .carousel-section {
+  
+   
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5rem;
+    overflow: hidden;
+
+
+}
+.main-carousel {
+    cursor: grab;
+    transform: scale(1.1);
+    overflow: hidden;
+    margin-left: 16vw;
+
+    
+
+  
+
+
+}
+.main-inner-carousel {
+    display: flex;
+    align-items: flex-start;
+
+    width: 80vw;
+}
+  
+
+}
+
+@media(min-width: 45em){
+    .image-main-container {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+
+    }
+    .image-main-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .video-container {
+        display: none;
+    }
+    .main-carousel {
+        
+     
+  
+        
+      
+    
+    
+    }
 }
