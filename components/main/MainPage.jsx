@@ -1,5 +1,6 @@
 import React from 'react'
 import TitleArrow from '../assets/TitleArrow'
+import Link from 'next/link'
 const MainPage = () => {
   return (
     <div className='relative'>  
@@ -15,6 +16,7 @@ const MainPage = () => {
             </source>
           </video>
         </div>
+        <Link href='/products'>
         <div className='absolute bottom-[120px] left-[7vw]  flex flex-col items-start gap-.5 ' >
  
           <h1 className='text-white custom-font title-text mb-[10px]'>СМОТРЕТЬ</h1>
@@ -26,6 +28,7 @@ const MainPage = () => {
         </div> 
            
         </div>
+        </Link>
         </div>
   )
 }

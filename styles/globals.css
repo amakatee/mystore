@@ -17,6 +17,7 @@
     font-size: 1.5rem;
     font-weight: 300;
     letter-spacing: .7px;
+    cursor: pointer;
 }
 .navbar {
     margin-top: .8rem;
@@ -31,7 +32,20 @@
     top: 0;
     left: 0;
 }
+.navbar-dark {
+    width: 100vw;
+    margin-top: .8rem;
+    background-color: white;
+    min-height: 8vh;
+    padding: .8rem;
+    border-top: 1px solid  #434343;
+    border-bottom: 1px solid  #434343;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
 
+}
 .nabvar-content {
     display: flex;
     align-items: center;
@@ -147,6 +161,30 @@
 .fourth-img-cont-1, .fourth-img-cont-2 {
     height: 35rem;
 }
+
+.products-section {
+    display: grid;
+    gap: 1rem;
+}
+.product-icon-img {
+    aspect-ratio: 1/1.5;
+}
+.product-icon-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.product-icon-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+/*Products*/
+
+/*Products Ends*/
 @media(max-width: 45em){
     .image-main-container {
         display: none;
@@ -207,6 +245,42 @@
     .fourth-img-cont-1, .fourth-img-cont-2 {
         height: 14rem;
     }
+
+    .navigation-text {
+        font-size: .8rem;
+        font-weight: 300;
+        letter-spacing: .1px;
+    }
+
+    /* Products Icons*/
+    .products-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .products-area {
+       padding-block: 2.5rem;
+    }
+    .product-icon-desc {
+        padding-top: .5rem;
+        margin-left: .5rem;
+
+        
+    }
+    .product-icon-cont {
+        margin-bottom: 1.2rem;
+    }
+    .product-icon-title {
+        font-size: .67rem;
+        letter-spacing: .5px;
+        font-weight: 350;
+        text-transform: uppercase;
+    }
+    .product-icon-price {
+        font-size: .69rem;
+        letter-spacing: .1px;
+        font-weight: 280;
+        margin-top: -1px;
+    }
+    /*  Products Icon Ends*/
   
   
 
@@ -277,4 +351,45 @@
     .fourth-padding {
         padding-block: 15rem;
     }
+
+    .navigation-text {
+        font-size: 1rem;
+        font-weight: 300;
+        letter-spacing: .1px;
+    
+    }
+
+    /* Products Icon Section*/
+    .product-icon-cont {
+        margin-bottom: 1.2rem;
+    }
+    .products-area {
+        width: 70vw;
+        margin: auto;
+        padding-block: 4rem;
+    }
+    .products-section {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem
+    }
+    .product-icon-desc {
+        padding-top: 1rem;
+
+        
+    }
+    .product-icon-title {
+        font-size: .85rem;
+        letter-spacing: .5px;
+        font-weight: 350;
+        text-transform: uppercase;
+    }
+    .product-icon-price {
+        font-size: .8rem;
+        letter-spacing: .1px;
+        font-weight: 280;
+        margin-top: -1px;
+    }
+    
+    /* Products Icon Section Ends*/
+  
 }
