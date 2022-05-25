@@ -1425,7 +1425,7 @@
   "resolved" "https://registry.npmjs.org/@react-spring/types/-/types-9.4.5.tgz"
   "version" "9.4.5"
 
-"@react-spring/web@~9.4.5":
+"@react-spring/web@^9.4.5", "@react-spring/web@~9.4.5":
   "integrity" "sha512-NGAkOtKmOzDEctL7MzRlQGv24sRce++0xAY7KlcxmeVkR7LRSGkoXHaIfm9ObzxPMcPHQYQhf3+X9jepIFNHQA=="
   "resolved" "https://registry.npmjs.org/@react-spring/web/-/web-9.4.5.tgz"
   "version" "9.4.5"
@@ -1550,6 +1550,18 @@
   "version" "16.0.4"
   dependencies:
     "@types/yargs-parser" "*"
+
+"@use-gesture/core@10.2.15":
+  "integrity" "sha512-R8k5GHKR6J3n48K1xiWCBSnTsxmfiVCp+MYPMhFaoHT1/oIjrFA6SeMmWDl0REwP/CpBfNdQ0FwOo/0dGjPhwA=="
+  "resolved" "https://registry.npmjs.org/@use-gesture/core/-/core-10.2.15.tgz"
+  "version" "10.2.15"
+
+"@use-gesture/react@^10.2.15":
+  "integrity" "sha512-Hdfp17a3iHDo33jasd8GIPlIjM4wxNzn1O9apNX2VrF7X2ewzXp4wCCQ4aPqsnyvBA1WhR8KHMrBS/XWQZxTHQ=="
+  "resolved" "https://registry.npmjs.org/@use-gesture/react/-/react-10.2.15.tgz"
+  "version" "10.2.15"
+  dependencies:
+    "@use-gesture/core" "10.2.15"
 
 "abort-controller@^3.0.0":
   "integrity" "sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg=="
