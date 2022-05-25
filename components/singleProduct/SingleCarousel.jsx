@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const SingleCarousel = ({images}) => {
+  
   return (
     <div className='flex-carousel'> 
         <div className='carousel-main-img'>

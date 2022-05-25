@@ -5,6 +5,21 @@ import {useRef, useState, useEffect} from 'react'
 const Carousel = ({images}) => {
     const carousel = useRef()
     const [width, setWidth] = useState(0)
+    const [allowScroll, setAllowScroll] = useState(false)
+
+    useEffect(() => {
+      if(allowScroll) {
+        const handleTouch = event => {
+        event.stopPropagation()
+        }
+        document.documentElement.addEventListener('touchmove', handleTouch)
+
+        return () => {
+          document.documentElement.removeEventListener('touchmove', handleTouch)
+        }
+      }
+    }, [allowScroll])
+   
     
     useEffect(() => {
         setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth)
@@ -16,6 +31,9 @@ const Carousel = ({images}) => {
         <motion.div  
         className='main-inner-carousel'
         drag='x'
+        onDragStart={(event, info) => {
+          setAllowScroll(Math.abs(info.delta.y) > Math.abs(info.delta.x))
+        }}
         dragDirectionLock
         dragConstraints={{right:0, left: -width}}
         >
