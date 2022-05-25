@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import SingleCarousel from '../../../components/singleProduct/SingleCarousel'
 import SingleDesc from '../../../components/singleProduct/SingleDesc'
 import NavbarDark from './../../../components/NavbarDark'
@@ -18,10 +18,11 @@ const ProductDetails = () => {
  
  
     ]
+  
     const descPos = useSpring({ y:0})
     const bindPosition = useDrag((params) => {
-
         descPos.y.set(params.offset[1])
+        
     })
 
   return (

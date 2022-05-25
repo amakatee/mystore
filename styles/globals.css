@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+body {
+    user-select: none;
+}
 .white-color {
     color: white;
 }
@@ -425,7 +427,8 @@
        
     }
      .single-product-desc {
-         width: 92vw;
+         width: 98vw;
+         padding-inline: 1rem;
          margin: auto;
          padding-top: 0;
         
