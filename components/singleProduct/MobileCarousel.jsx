@@ -4,6 +4,8 @@ import {motion} from 'framer-motion'
 
 const MobileCarousel = ({images}) => {
     const [height, setHeight] = useState(0)
+    const [slideIndex, setSliteIndex] = useState(0)
+    const existingImage = images.find((img, index) => slideIndex === index)
     const carousel = useRef()
     const [allowScroll, setAllowScroll] = useState(false)
     useEffect(() => {
@@ -25,14 +27,15 @@ const MobileCarousel = ({images}) => {
   return (
     <div >
        
-        <motion.div ref={carousel} className='mobile-single-img'>
-            <motion.div className='mobile-images-slider' 
+        <motion.div ref={carousel} className= 'relative mobile-single-img'>
+            <motion.div className='mobile-images-slider relati' 
             drag="y"
             dragConstraints={{ bottom: 0 , top: -height}}
             onDragStart={(event, info) => {
             setAllowScroll(Math.abs(info.delta.y) > Math.abs(info.delta.x))}}
+            
             >
-                {images.map(img => (
+                {images.map((img) => (
                     <div className='mobile-item-img'>
                         <div className='mobile-single-img-cont'>
                             <img src={img}></img>
@@ -41,13 +44,14 @@ const MobileCarousel = ({images}) => {
                 ))}
 
             </motion.div>
-        </motion.div>
-        {/* <div className='absolute t-[10vh] l-30 w-[10rem] h-[20rem] bg-[#fff]'>
-            {Array.from({length:5}).map((item,index) => {
-                <div  className=' absolute dot-carousel w-[50px] h-[50px] bg-[#fff]'>dsedkjwlejflwg</div>
+            <div className='dot'>
+            {Array.from({length:images.length}).map((item,index) => (
+                <div  className={slideIndex === index ? "dot-child active" : "dot-child"} onClick={() => setSliteIndex(index)}></div>
 
-            })}
-        </div> */}
+            ))}
+        </div>
+        </motion.div>
+     
     </div>
   )
 }

@@ -9,9 +9,9 @@ const ProductMobileNav = () => {
         
       
         <div className='flex flex-col justify-between gap-1'>
-           
+           <Link  href='/products'>
             <IoIosArrowRoundBack color='#434343' size={30} />
-    
+            </Link>
         </div>
        
         

@@ -6,14 +6,12 @@ const Carousel = ({images}) => {
     const carousel = useRef()
     const [width, setWidth] = useState(0)
     const [allowScroll, setAllowScroll] = useState(false)
-
     useEffect(() => {
-      if(allowScroll) {
+      if (allowScroll) {
         const handleTouch = event => {
-        event.stopPropagation()
+          event.stopPropagation()
         }
         document.documentElement.addEventListener('touchmove', handleTouch)
-
         return () => {
           document.documentElement.removeEventListener('touchmove', handleTouch)
         }
