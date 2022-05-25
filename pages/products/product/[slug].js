@@ -4,7 +4,8 @@ import SingleDesc from '../../../components/singleProduct/SingleDesc'
 import NavbarDark from './../../../components/NavbarDark'
 import MobileCarousel from '../../../components/singleProduct/MobileCarousel'
 import ProductMobileNav from '../../../components/ProductMobileNav'
-
+import {useDrag} from 'react-use-gesture'
+import {useSpring, animated} from 'react-spring'
 
 const ProductDetails = () => {
     const images = [
@@ -17,6 +18,12 @@ const ProductDetails = () => {
  
  
     ]
+    const descPos = useSpring({ y:0})
+    const bindPosition = useDrag((params) => {
+
+        descPos.y.set(params.offset[1])
+    })
+
   return (
       <>
      
@@ -28,10 +35,11 @@ const ProductDetails = () => {
                 <ProductMobileNav />
                 
             </div>
-         <div className='single-product-desc '>
+         <animated.div {...bindPosition()} className='single-product-desc '  
+         style={{ y:descPos.y}}>
              <SingleDesc />
 
-        </div>
+        </animated.div>
         <div className='single-product-carousel pt-[14vh]'>
             <SingleCarousel images={images} />
             <NavbarDark />

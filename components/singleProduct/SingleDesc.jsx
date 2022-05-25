@@ -1,11 +1,18 @@
 import React, { useState } from 'react'
 
+
 const SingleDesc = () => {
     const [bottomDesc1, setBottomDesc1] = useState(false)
     const [bottomDesc2, setBottomDesc2] = useState(false)
+   
+  
+  
+
+
+
   return (
     <>
-    <div className='single-desc'>
+    <div  className='single-desc'>
        <div className='desc-header mb-[2rem]'>
             <h2 className='desc-title'>богатый опыт</h2>
             <p className='desc-price'>₽ 2000</p>

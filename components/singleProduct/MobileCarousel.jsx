@@ -35,7 +35,7 @@ const MobileCarousel = ({images}) => {
             setAllowScroll(Math.abs(info.delta.y) > Math.abs(info.delta.x))}}
             
             >
-                {images.map((img) => (
+                {images.map((img, index) => (
                     <div className='mobile-item-img'>
                         <div className='mobile-single-img-cont'>
                             <img src={img}></img>
