@@ -13,7 +13,7 @@ const NavbarDark = () => {
     
         </div>
         <Link href="/">
-        <h1 id='logo' className='cursor-pointer custom-font dark-color'>иней</h1>
+        <h1 id='logo' className='cursor-pointer custom-font dark-color'>И́ней </h1>
         </Link>
         
         <div className='flex items-center gap-.6'>

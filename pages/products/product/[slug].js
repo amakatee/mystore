@@ -2,6 +2,7 @@ import React from 'react'
 import SingleCarousel from '../../../components/singleProduct/SingleCarousel'
 import SingleDesc from '../../../components/singleProduct/SingleDesc'
 import NavbarDark from './../../../components/NavbarDark'
+import MobileCarousel from '../../../components/singleProduct/MobileCarousel'
 
 
 const ProductDetails = () => {
@@ -17,17 +18,22 @@ const ProductDetails = () => {
     ]
   return (
       <>
-       <NavbarDark />
-    <div className=' width-[100vw] pt-[14vh] '>
+     
+    <div className=' width-[100vw] '>
        
-        <div className='single-prod-flex w-[80vw] mx-auto'>
-         <div className='single-product-desc'>
+        <div className='single-prod-flex w-[100vw] mx-auto'>
+            <div className='mobile-single-carousel'>
+                <MobileCarousel  images={images}/>
+                
+            </div>
+         <div className='single-product-desc pt-[14vh]'>
              <SingleDesc />
 
         </div>
-        <div className='single-product-carousel'>
+        <div className='single-product-carousel pt-[14vh]'>
             <SingleCarousel images={images} />
-        </div>
+            <NavbarDark />
+        </div> 
         </div>
        
     </div>
