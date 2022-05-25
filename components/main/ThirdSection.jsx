@@ -9,11 +9,11 @@ const ThirdSection = () => {
       </div>
       <div className='ml-[7vw] third-title'>
       <p className='main-section-desc mb-[5px] '>
-        best of 2022
+        Несколько лучших вариантов 
 
       </p>
       <div className='flex items-center gap-5'>
-        <TitleArrow text="Dresses" color="#434343" />
+        <TitleArrow text="Одежда" color="#434343" />
         </div>  
        
       </div>

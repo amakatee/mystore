@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { urlFor } from '../../lib/client'
 
 const SingleCarousel = ({images}) => {
     const [currentImg, setCurrentImage] = useState(0)
@@ -7,13 +8,13 @@ const SingleCarousel = ({images}) => {
   return (
     <div className='flex-carousel'> 
         <div className='carousel-main-img'>
-            <img src={existinImg}></img>
+            <img src={urlFor(existinImg)}></img>
 
         </div>
         <div className='carousel-icon-img'>
             {images.map((img, index) => (
                 <div className='cursor-pointer icon-image' onClick={() => setCurrentImage(index)}>
-                    <img  src={img}></img>
+                    <img  src={urlFor(img)}></img>
                 </div>
             ))}
 

@@ -1,7 +1,14 @@
 import React from 'react'
 import TitleArrow from '../assets/TitleArrow'
 import Link from 'next/link'
+import { useContext } from 'react'
+import CartContext  from '../../context/StateContext'
 const MainPage = () => {
+  const {} = useContext(CartContext)
+
+  
+
+
   return (
     <div className='relative'>  
       <div className='image-main-container'>

@@ -2,21 +2,11 @@ import React from 'react'
 import NavbarDark from '../../components/NavbarDark'
 import ProductIcon from '../../components/products/ProductIcon'
 import Navigation from './../../components/products/Navigation'
+import {client} from './../../lib/client'
 
 
-const Products = () => {
-    const images = [
-
-
-        'https://i.pinimg.com/564x/0d/36/4c/0d364c24bce6b5500dcd40979a756906.jpg',
-        'https://i.pinimg.com/564x/1c/66/b1/1c66b13d9f380d3b4b4279f9f3243874.jpg',
-        'https://i.pinimg.com/564x/d5/d5/6a/d5d56a5f4b44553616de3c7199cbdc4c.jpg',
-        'https://i.pinimg.com/564x/0d/36/4c/0d364c24bce6b5500dcd40979a756906.jpg',
-        'https://i.pinimg.com/564x/1c/66/b1/1c66b13d9f380d3b4b4279f9f3243874.jpg',
-        'https://i.pinimg.com/564x/d5/d5/6a/d5d56a5f4b44553616de3c7199cbdc4c.jpg'
- 
- 
-    ]
+const Products = ({products}) => {
+    
   return (
     <>
     <NavbarDark />
@@ -24,7 +14,7 @@ const Products = () => {
         <Navigation />
         <div className='products-area'>
         <div className='products-section'>
-            {images.map(img => <ProductIcon key={img} img={img} />)}
+            {products.map(product => <ProductIcon product={product} />)}
 
         </div>
         </div>
@@ -33,6 +23,15 @@ const Products = () => {
      
     </>
   )
+}
+
+export const getServerSideProps = async () => {
+  const query = `*[_type == 'product']`
+  const products = await client.fetch(query)
+
+  return {
+    props: {products}
+  }
 }
 
 export default Products

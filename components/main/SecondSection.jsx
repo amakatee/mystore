@@ -27,7 +27,7 @@ const SecondSection = () => {
              <Carousel images={images} />
         </div>
         <div>
-          <p className='main-section-desc dark-color'>goldplated silver with beautiful stones for every day wear</p>
+          <p className='main-section-desc dark-color'>Украшения из позолоченого серебра  </p>
         </div>
         
    

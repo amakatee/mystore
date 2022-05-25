@@ -28,7 +28,7 @@ const FourthSection = () => {
 
         </div>
         <div className='flex items-center gap-5 third-desc ml-[7vw]'>
-        <TitleArrow text="Shoes" color="#434343"  />
+        <TitleArrow text="Обувь" color="#434343"  />
         </div>
         </div>  
     </div>

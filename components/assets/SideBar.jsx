@@ -6,10 +6,10 @@ const SideBar = ({setSideBar}) => {
     <div className='sidemenu ' >
     <GrClose size={27} className="absolute right-3 top-3"  onClick={() => setSideBar(false)} />
     <div className='menu-cont'>
-      <div>All</div>
-      <div>Acces</div>
-      <div>Dresses</div>
-      <div>Shoese</div>
+      <div>Все товары</div>
+      <div>Украшения</div>
+      <div>Одежда</div>
+      <div>Обувь</div>
     </div>
 
   </div>
