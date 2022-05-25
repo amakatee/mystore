@@ -42,6 +42,12 @@ const MobileCarousel = ({images}) => {
 
             </motion.div>
         </motion.div>
+        <div className='absolute top-10 left-30'>
+            {Array.from({length:5}).map((item,index) => {
+                <div className='dot-carousel width-[10px] height-[10px] bg-[#fff]'>dseg</div>
+
+            })}
+        </div>
     </div>
   )
 }

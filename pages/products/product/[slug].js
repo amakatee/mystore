@@ -3,6 +3,7 @@ import SingleCarousel from '../../../components/singleProduct/SingleCarousel'
 import SingleDesc from '../../../components/singleProduct/SingleDesc'
 import NavbarDark from './../../../components/NavbarDark'
 import MobileCarousel from '../../../components/singleProduct/MobileCarousel'
+import ProductMobileNav from '../../../components/ProductMobileNav'
 
 
 const ProductDetails = () => {
@@ -24,9 +25,10 @@ const ProductDetails = () => {
         <div className='single-prod-flex w-[100vw] mx-auto'>
             <div className='mobile-single-carousel'>
                 <MobileCarousel  images={images}/>
+                <ProductMobileNav />
                 
             </div>
-         <div className='single-product-desc pt-[14vh]'>
+         <div className='single-product-desc '>
              <SingleDesc />
 
         </div>
