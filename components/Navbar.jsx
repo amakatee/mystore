@@ -1,8 +1,9 @@
-import React, {useState} from 'react'
+import React, {useState, useRef, useEffect} from 'react'
 import SideBar from './assets/SideBar'
 import ShoppingCartMini from './assets/ShoppingCartMini'
 import { useContext } from 'react'
 import CartContext from '../context/StateContext'
+import gsap from 'gsap/dist/gsap'
 
 const Navbar = () => {
   const [sideBar, setSideBar ] = useState(false)

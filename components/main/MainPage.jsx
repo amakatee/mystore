@@ -1,16 +1,29 @@
 import React from 'react'
 import TitleArrow from '../assets/TitleArrow'
 import Link from 'next/link'
-import { useContext } from 'react'
+import { useContext, useRef,useEffect } from 'react'
 import CartContext  from '../../context/StateContext'
+import { gsap } from "gsap/dist/gsap";
+import { TweenMax, Power3 } from 'gsap'
 const MainPage = () => {
   const {} = useContext(CartContext)
+  const titleBox = useRef()
+  const mainPage = useRef()
+
+  useEffect (() => {
+    gsap.fromTo(mainPage.current, {opacity:0}, {opacity: 1, duration: 0.75, easy:"Power3.easeOut"})
+
+    gsap.fromTo(titleBox.current, {opacity:0, y:-60}, {opacity: 1, y:0, duration: 0.75, easy:"Power3.easeOut"})
+
+  },[])
+
+
 
   
 
 
   return (
-    <div className='relative'>  
+    <div ref={mainPage} className='relative'>  
       <div className='image-main-container'>
         <img src='https://images.pexels.com/photos/2009972/pexels-photo-2009972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'></img>
       </div>
@@ -24,7 +37,7 @@ const MainPage = () => {
           </video>
         </div>
         <Link href='/products'>
-        <div className='absolute bottom-[120px] left-[7vw]  flex flex-col items-start gap-.5 ' >
+        <div ref={titleBox} className='absolute bottom-[120px] left-[7vw]  flex flex-col items-start gap-.5 ' >
  
           <h1 className='text-white custom-font title-text mb-[10px]'>СМОТРЕТЬ</h1>
          <div className='white-arrow w-[50px]'>
