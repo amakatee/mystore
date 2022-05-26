@@ -3,25 +3,33 @@ import NavbarDark from '../../components/NavbarDark'
 import ProductIcon from '../../components/products/ProductIcon'
 import Navigation from './../../components/products/Navigation'
 import {client} from './../../lib/client'
+import InnerLayout from '../../components/InnerLayout'
 
 
 const Products = ({products}) => {
     
   return (
     <>
-    <NavbarDark />
-    <div className='products-content' >
-        <Navigation />
-        <div className='products-area'>
-        <div className='products-section'>
-            {products.map(product => <ProductIcon product={product} />)}
+    <InnerLayout>
+    {products.map(product => <ProductIcon product={product} />)}
 
-        </div>
-        </div>
-
-    </div>
-     
+    </InnerLayout>
     </>
+
+    // <>
+    // <NavbarDark />
+    // <div className='products-content' >
+    //     <Navigation />
+    //     <div className='products-area'>
+    //     <div className='products-section'>
+    //         {products.map(product => <ProductIcon product={product} />)}
+
+    //     </div>
+    //     </div>
+
+    // </div>
+     
+    // </>
   )
 }
 

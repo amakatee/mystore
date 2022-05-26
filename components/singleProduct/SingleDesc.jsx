@@ -1,22 +1,22 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import {PortableText} from '@portabletext/react'
 import { urlFor } from '../../lib/client'
+import CartContext from './../../context/StateContext'
 
-const SingleDesc = ({product}) => {
+const SingleDesc = ({product , products}) => {
+    const {sizeValue, setSizeValue, setColorValue, addTocart, colorValue} = useContext(CartContext)
     const [bottomDesc1, setBottomDesc1] = useState(false)
     const [bottomDesc2, setBottomDesc2] = useState(false)
-    const [colorValue, setColorValue] = useState()
-    const [sizeValue, setSizeValue] = useState()
-    const {image, price, color,size, details, title, fabric, fabricDesc, measures, measuresDesc, slug} = product
-   
-  
-  
 
+
+    const {image, price, color,size, details, title, fabric, fabricDesc, measures, measuresDesc, slug} = product
+
+ 
 
 
   return (
     <>
-    <div  className='single-desc'>
+    <div  className=' single-desc'>
        <div className='desc-header mb-[2rem]'>
             <h2 className='desc-title'>{title}</h2>
             <p className='desc-price'>₽ {price}</p>
@@ -50,7 +50,7 @@ const SingleDesc = ({product}) => {
 
 
         <div className='desc-buttons mb-[2rem]'>
-            <button className='add-to-cart-btn'>В корзину</button>
+            <button onClick={() => addTocart( product, colorValue, sizeValue)} className='add-to-cart-btn'>В корзину</button>
       
         </div>
 

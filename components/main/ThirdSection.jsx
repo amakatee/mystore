@@ -1,5 +1,6 @@
 import React from 'react'
 import TitleArrow from '../assets/TitleArrow'
+import Link from 'next/link'
 
 const ThirdSection = () => {
   return (
@@ -12,11 +13,14 @@ const ThirdSection = () => {
         Несколько лучших вариантов 
 
       </p>
+      <Link href='products/clothing'>
       <div className='flex items-center gap-5'>
         <TitleArrow text="Одежда" color="#434343" />
         </div>  
+        </Link>
        
       </div>
+
      
     </div>
   )

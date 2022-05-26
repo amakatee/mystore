@@ -1,5 +1,6 @@
 import React from 'react'
 import TitleArrow from '../assets/TitleArrow'
+import Link from 'next/link'
 
 const FourthSection = () => {
   return (
@@ -27,9 +28,11 @@ const FourthSection = () => {
            
 
         </div>
+        <Link href='products/shoes'>
         <div className='flex items-center gap-5 third-desc ml-[7vw]'>
         <TitleArrow text="Обувь" color="#434343"  />
         </div>
+        </Link>
         </div>  
     </div>
   )

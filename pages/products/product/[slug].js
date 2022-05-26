@@ -46,7 +46,7 @@ const ProductDetails = ({product, products}) => {
                 
             </div>
          <div  className=' single-product-desc' >
-             <SingleDesc product={product} />
+             <SingleDesc product={product}  />
 
         </div>
         <div className='single-product-carousel pt-[14vh]'>

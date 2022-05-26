@@ -3,6 +3,7 @@ import {motion} from 'framer-motion'
 import {useRef, useState, useEffect} from 'react'
 import Carousel from './../assets/Carousel'
 import TitleArrow from './../assets/TitleArrow'
+import Link from 'next/link'
 
 const SecondSection = () => {
    const images = [
@@ -18,10 +19,11 @@ const SecondSection = () => {
   return (
 
     <div className='carousel-section ml-[7vw]' >
-        
+        <Link href='products/jewelry'>
         <div className='flex items-center gap-5  mt-[20vh]'>
         <TitleArrow text='украшения' color="#434343" />
         </div>
+        </Link>
 
         <div className='carousel-cont'>
         

@@ -1,30 +1,37 @@
 import React from 'react'
 import {GrClose} from 'react-icons/gr'
+import { useContext } from 'react'
+import CartContext from '../../context/StateContext'
+import { urlFor } from '../../lib/client'
 
-const ShoppingCart = () => {
+const ShoppingCart = ({cart}) => {
+    const {title, colorValue, sizeValue , price ,image, qty, slug} = cart
+
+    const { removeItem} = useContext(CartContext)
+ 
   return (
     <div className=' mini-product-cont'> 
     <div className='mini-product-img'>
-        <img src='https://i.pinimg.com/564x/51/95/60/519560992ac0284dcb03c15c202c16d2.jpg'></img>
+        <img src={urlFor(image[0])}></img>
 
     </div>
     <div className='mini-product-desc '>
        <div className='flex flex-col gap-3 w-[100%]' >
         <div className='desc-header'>
             <h1 className='mini-desc-title'>
-                Теннисная Юбка 
+              {title}
             </h1>
-            <GrClose className='cursor-pointer close-mini' />
+            <GrClose className='cursor-pointer close-mini' onClick={() => removeItem(slug)} />
 
         </div>
       
-        <h1 className='size-color-mini'> Белый / S </h1>
+        <h1 className='size-color-mini'> {colorValue} / {sizeValue} </h1>
        
         </div> 
        
         <div className='flex items-center justify-between w-[100%]' >
-            <p className='qty-mini'>к-во 2</p>
-            <p className='price-mini'> P 3000</p>
+            <p className='qty-mini'>к-во {qty}</p>
+            <p className='price-mini'> P {price}</p>
         </div>
 
     </div>
