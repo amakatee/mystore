@@ -6,7 +6,7 @@ body {
 }
 
 .color-active {
-    border: 1px solid #43434334;
+    border: 2px solid #434343a6;
    transition: .3s ease;
 }
 .white-color {
@@ -580,13 +580,13 @@ body {
     }
     .desc-header {
         display: grid;
-        grid-template-columns: 4fr 1fr;
+        grid-template-columns: 3fr 1fr;
         width: 100%;
         align-items: center;
        
     }
     .desc-title {
-        font-size: 1rem;
+        font-size: .9rem;
         font-weight: 280;
         text-transform: uppercase;
         letter-spacing: .5px;
@@ -595,7 +595,7 @@ body {
       text-align: start;
     }
     .desc-price {
-        font-size: .9rem;
+        font-size: .8rem;
         font-weight: 290;
         text-transform: uppercase;
         letter-spacing: .5px;
@@ -608,11 +608,12 @@ body {
     .add-to-cart-btn {
 
         border: 1px solid #434343;
-        padding: 1em 5em;
+        padding: 1em 8em;
         text-transform: uppercase;
         font-size: .7rem;
         margin-right: .4rem;
-        margin-bottom: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
     }
     .buy-now-btn {
         border: 1px solid #434343;
@@ -628,6 +629,11 @@ body {
         gap: .5rem;
     
     }
+    .desc-main {
+        font-size: .72rem;
+        font-weight: 290;
+        letter-spacing: .1px;
+    }
     .additional {
         border-bottom: 1px solid #43434360; 
         width: 90vw;
@@ -637,6 +643,7 @@ body {
         text-transform: uppercase;
         padding-bottom: .3rem;
         cursor: pointer;
+        font-size: .8rem;
         
     }
     .add-desc {
@@ -690,23 +697,40 @@ body {
         transform: translate(-50%, -50%);
         display: flex;
         flex-direction: column;
-       gap: .5rem;
+       gap: .6rem;
     }
     .dot-child {
-        width: 6px;
-        height: 6px;
+        width: 8px;
+        height: 8px;
         border-radius:50% ;
         background-color: rgba(0, 0, 0, 0.37);
+        transition: .3s ease;
+        cursor: pointer;
        
         
 
 
     }
     .active {
-        transform: scale(1.4);
+        transform: scale(1.2);
+        background-color: rgba(0, 0, 0, 0.445);
+        transition: .3s ease;
 
     }
-
+    .single-product-desc {
+        position: absolute;
+        top: 80vh;
+       
+       
+        
+      
+    }
+.mobile-single-carousel {
+   
+    position: fixed;
+ 
+   
+}
      /* Mobile Product Caroosel Ends*/
 
 }

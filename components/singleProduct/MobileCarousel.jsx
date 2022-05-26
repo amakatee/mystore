@@ -39,18 +39,18 @@ const MobileCarousel = ({images}) => {
                 {images.map((img, index) => (
                     <div className='mobile-item-img'>
                         <div className='mobile-single-img-cont'>
-                            <img src={urlFor(img)}></img>
+                            <img src={urlFor(existingImage)}></img>
                         </div>
                     </div>
                 ))}
 
             </motion.div>
-            {/* <div className='dot'>
+            <div className='dot'>
             {Array.from({length:images.length}).map((item,index) => (
                 <div  className={slideIndex === index ? "dot-child active" : "dot-child"} onClick={() => setSliteIndex(index)}></div>
 
             ))}
-        </div> */}
+        </div>
         </motion.div>
      
     </div>

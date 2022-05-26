@@ -8,7 +8,7 @@ const Layout = ({children}) => {
 
         </main>
         <footer>
-            bottom nav 
+    
         </footer>
     </div>
   )

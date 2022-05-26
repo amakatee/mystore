@@ -7,7 +7,7 @@ const SingleDesc = ({product}) => {
     const [bottomDesc2, setBottomDesc2] = useState(false)
     const [colorValue, setColorValue] = useState()
     const [sizeValue, setSizeValue] = useState()
-    const {image, price, color,size, details, title, fabric, fabricDesc, measures, measuresDesc} = product
+    const {image, price, color,size, details, title, fabric, fabricDesc, measures, measuresDesc, slug} = product
    
   
   
@@ -29,7 +29,7 @@ const SingleDesc = ({product}) => {
                 <h4 className='color-size-title'> Цвет: <span className=''>{colorValue}</span> </h4>
                 <div className='flex gap-2 color-icons'>
                     {color.map(c => (
-                        <div onClick={() => setColorValue(color)} className={ colorValue === c ? 'color-icon color-active bg-[#fff0] ' :'color-icon  bg-[#fff0] '}>
+                        <div key={c} onClick={() => setColorValue(color)} className={ colorValue === c ? 'color-icon color-active bg-[#fff0] ' :'color-icon  bg-[#fff0] '}>
                             <img className='rounded-full  w-[20px] h-[20px]  ' src={urlFor(image[0])}></img>
                         </div>
 
@@ -42,7 +42,7 @@ const SingleDesc = ({product}) => {
                 <h4 className='color-size-title'>Размер: {sizeValue}</h4>
                 <div className='flex gap-2' >
                     {size.map(s => (
-                        <div onClick={() => setSizeValue(s)} className={sizeValue === s ?  'size-icon size-active w-[20px] h-[25px] ' : 'size-icon w-[20px] h-[25px] '}>{s}</div>
+                        <div key={s} onClick={() => setSizeValue(s)} className={sizeValue === s ?  'size-icon size-active w-[20px] h-[25px] ' : 'size-icon w-[20px] h-[25px] '}>{s}</div>
                     ))}
                 </div>
             </div>
@@ -51,7 +51,7 @@ const SingleDesc = ({product}) => {
 
         <div className='desc-buttons mb-[2rem]'>
             <button className='add-to-cart-btn'>В корзину</button>
-            <button className='buy-now-btn'>Купить сеейчас</button>
+      
         </div>
 
         <div className='product-additional mb-[2rem]'>
