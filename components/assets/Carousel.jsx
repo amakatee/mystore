@@ -34,15 +34,91 @@ const Carousel = ({images}) => {
         }}
         dragDirectionLock
         dragConstraints={{right:0, left: -width}}
-        >
+        
+        >  
+         {/* <div className='main-img-cont'>
+        <video loop={true} muted={true} autoPlay={true} playsInline controls={false} className="video-main">
+          <source
+          src='/bracelet.mp4'
+          type='video/mp4'
+          >
+          </source>
+        </video>
+      </div> */}
+      <motion.div className='main-item '>
+                  <div  className='main-img-cont'>
+                    
+                      <video className="video" loop={true} muted={true} autoPlay={true} playsInline controls={false}>
+                         <source
+                       src='/bracelet.mp4'
+                        type='video/mp4'
+          >
+                        </source>
+                     </video>
+                  </div>
+                  
+         </motion.div>
+         <motion.div className='main-item '>
+                  <div  className='main-img-cont'>
+                    
+                      <video className="video" loop={true}  muted={true} autoPlay={true} playsInline controls={false}>
+                         <source
+                       src='/2.mp4'
+                        type='video/mp4'
+          >
+                        </source>
+                     </video>
+                  </div>
+                  
+         </motion.div>
+         <motion.div className='main-item '>
+                  <div  className='main-img-cont'>
+                    
+                      <video className="video" loop={true}  muted={true} autoPlay={true} playsInline controls={false}>
+                         <source
+                       src='/4.mp4'
+                        type='video/mp4'
+          >
+                        </source>
+                     </video>
+                  </div>
+                  
+         </motion.div>
+         <motion.div className='main-item '>
+                  <div  className='main-img-cont'>
+                    
+                      <video className="video" loop={true}  muted={true} autoPlay={true} playsInline controls={false}>
+                         <source
+                       src='/3.mp4'
+                        type='video/mp4'
+          >
+                        </source>
+                     </video>
+                  </div>
+                  
+         </motion.div>
+         <motion.div className='main-item '>
+                  <div  className='main-img-cont'>
+                    
+                      <video className="video" loop={true}  muted={true} autoPlay={true} playsInline controls={false}>
+                         <source
+                       src='/5.mp4'
+                        type='video/mp4'
+          >
+                        </source>
+                     </video>
+                  </div>
+                  
+         </motion.div>
+       
 
-            {images.map(img => {
+            {/* {images.map(img => {
                return ( <motion.div className='main-item '>
                   <div key={img} className='main-img-cont'>
                       <img src={img}></img>
                   </div>
                 </motion.div>
-            )})}
+            )})} */}
         </motion.div>
 
     </motion.div>

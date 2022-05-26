@@ -24,6 +24,7 @@ const SecondSection = () => {
         </div>
 
         <div className='carousel-cont'>
+        
              <Carousel images={images} />
         </div>
         <div>
