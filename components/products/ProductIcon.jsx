@@ -12,7 +12,7 @@ const ProductIcon = ({product}) => {
         </div>
         <div className='product-icon-desc'>
             <h2 className='product-icon-title'>{product.title}</h2>
-            <p className='product-icon-price'>P {product.price}</p>
+            <p className='product-icon-price'>₽ {product.price}</p>
          </div>
     </div>
     </Link>

@@ -84,19 +84,11 @@ const Carousel = ({images}) => {
                   </div>
                   
          </motion.div>
-         <motion.div className='main-item '>
-                  <div  className='main-img-cont'>
-                    
-                      <video className="video" loop={true}  muted={true} autoPlay={true} playsInline controls={false}>
-                         <source
-                       src='/3.mp4'
-                        type='video/mp4'
-          >
-                        </source>
-                     </video>
+         {/* <motion.div className='main-item '>
+                  <div  className='main-img-cont '>
+                      <img  src='/8.JPG'></img>
                   </div>
-                  
-         </motion.div>
+                </motion.div> */}
          <motion.div className='main-item '>
                   <div  className='main-img-cont'>
                     
