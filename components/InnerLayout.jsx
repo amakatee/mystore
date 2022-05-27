@@ -6,7 +6,7 @@ import gsap from 'gsap/dist/gsap'
 const InnerLayout = ({children}) => {
   const productsRef = useRef()
   useEffect(() => {
-    gsap.fromTo(productsRef.current, {opacity: 0} , {opacity: 1, dursation: 3.2} )
+    gsap.fromTo(productsRef.current, {opacity: 0} , {opacity: 1, duration: 1.8} )
   })
   
   return (

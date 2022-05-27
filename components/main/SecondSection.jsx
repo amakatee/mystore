@@ -3,18 +3,20 @@ import {motion} from 'framer-motion'
 import {useRef, useState, useEffect} from 'react'
 import Carousel from './../assets/Carousel'
 import TitleArrow from './../assets/TitleArrow'
+import gsap from 'gsap/dist/gsap'
 import Link from 'next/link'
 
 const SecondSection = () => {
-   const images = [
-       'https://i.pinimg.com/564x/51/95/60/519560992ac0284dcb03c15c202c16d2.jpg',
-       'https://i.pinimg.com/564x/00/2e/ec/002eec7d8058600da1ddba54ad26df14.jpg',
-       'https://i.pinimg.com/564x/a0/e6/d6/a0e6d688bafd0a6e4450faf08f784c65.jpg',
-       'https://i.pinimg.com/736x/22/34/31/2234315ebe8d26b1928a7b4dd05993fd.jpg',
-       'https://i.pinimg.com/564x/e8/26/e0/e826e0ec646e1eef37a26654d74902ea.jpg'
+  const descript = useRef()
+  useEffect (() => {
+    const tl = gsap.timeline({
+      defaults:{ duration: 1.6, ease:"Power3.easeOut"}
+
+    })
+    tl.fromTo(descript.current, {opacity:0, y:"-100%"}, {opacity: 1, y:0})
 
 
-   ]
+  },[])
 
   return (
 
@@ -27,10 +29,10 @@ const SecondSection = () => {
 
         <div className='carousel-cont'>
         
-             <Carousel images={images} />
+             <Carousel  />
         </div>
-        <div>
-          <p className='main-section-desc dark-color'>Украшения из позолоченого серебра  </p>
+        <div >
+          <p className='overflow-hidden' ><span ref={descript} className='block main-section-desc dark-color'>Украшения из позолоченого серебра </span> </p>
         </div>
         
    

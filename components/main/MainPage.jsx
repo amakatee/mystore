@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useContext, useRef,useEffect } from 'react'
 import CartContext  from '../../context/StateContext'
 import { gsap } from "gsap/dist/gsap";
-import { TweenMax, Power3 } from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 const MainPage = () => {
   const {} = useContext(CartContext)
   const titleBox = useRef()
@@ -13,14 +13,14 @@ const MainPage = () => {
 
 
   useEffect (() => {
+  
     const tl = gsap.timeline({
-      defaults:{ duration: .75, ease:"Power3.easeOut"}
-
-    })
-    tl.fromTo(titleBox.current, {opacity:0, y:"-100%"}, {opacity: 1, y:0})
+      defaults:{ duration: .75, ease:"Power3.easeOut"},
+     })
+    
+    tl.fromTo(titleBox.current, {opacity:0, y:"-100%"}, {opacity: 1, y:0, delay: 1.1})
     tl.fromTo(arrow.current, {opacity:0, y:"-100%"}, {opacity: 1, y:0})
 
-    // gsap.fromTo(titleBox.current, {opacity:0, y:-60}, {opacity: 1, y:0, duration: 0.75, easy:"Power3.easeOut"})
 
   },[])
 

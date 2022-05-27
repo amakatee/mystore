@@ -6,13 +6,26 @@ import CartContext from '../context/StateContext'
 import gsap from 'gsap/dist/gsap'
 
 const Navbar = () => {
+
+  const nav = useRef()
   const [sideBar, setSideBar ] = useState(false)
   const [shoppingCart, setShoppingCart] = useState(false)
   const {cartItems} = useContext(CartContext)
 
+  useEffect(() => {
+    
+
+    gsap.fromTo(nav.current, {y:'-100%', opacity:0 } , 
+    {y:'0%' , opacity: 1, duration:.5, delay: .5, ease: "power3.out"})
+
+
+  })
+
+
+
   return (
     <>
-    <div className='absolute navbar '>
+    <div ref={nav} className='absolute navbar '>
             <div className='nabvar-content'>
                 
               
