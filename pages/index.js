@@ -5,8 +5,9 @@ import SecondSection from '../components/main/SecondSection'
 import ThirdSection from '../components/main/ThirdSection'
 import FouthSection from '../components/main/FourthSection'
 import FourthSection from '../components/main/FourthSection'
-import { gsap } from "gsap/dist/gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger)
 
 
 

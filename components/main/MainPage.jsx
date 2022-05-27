@@ -3,14 +3,15 @@ import TitleArrow from '../assets/TitleArrow'
 import Link from 'next/link'
 import { useContext, useRef,useEffect } from 'react'
 import CartContext  from '../../context/StateContext'
-import { gsap } from "gsap/dist/gsap";
+import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger)
 const MainPage = () => {
   const {} = useContext(CartContext)
-  const titleBox = useRef()
-  const mainPage = useRef()
-  const arrow = useRef()
-  const video = useRef(video)
+  const titleBox = useRef(null)
+  const mainPage = useRef(null)
+  const arrow = useRef(null)
+  const video = useRef(null)
 
 
   useEffect (() => {

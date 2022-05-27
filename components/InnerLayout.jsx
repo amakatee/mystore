@@ -4,7 +4,7 @@ import Navigation from './products/Navigation'
 import gsap from 'gsap/dist/gsap'
 
 const InnerLayout = ({children}) => {
-  const productsRef = useRef()
+  const productsRef = useRef(null)
   useEffect(() => {
     gsap.fromTo(productsRef.current, {opacity: 0} , {opacity: 1, duration: 1.8} )
   })

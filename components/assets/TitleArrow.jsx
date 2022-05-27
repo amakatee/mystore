@@ -1,21 +1,22 @@
 import React, {useEffect, useRef} from 'react'
-
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger)
 
 const TitleArrow = ({text, color}) => {
-  // const arrow = useRef()
-  // const text = useRef()
+  // const arrow = useRef(null)
+  // const text = useRef(null)
   
-  // useEffect (() => {
+  useEffect (() => {
   
-  //   const tl = gsap.timeline({
-  //     defaults:{ duration: .75, ease:"Power3.easeOut"},
-  //    })
+    const tl = gsap.timeline({
+      defaults:{ duration: .75, ease:"Power3.easeOut"},
+     })
     
-  //   // tl.fromTo(text.current, {opacity:0, y:"-100%"}, {opacity: 1, y:0, delay: 1.1})
-  //   tl.fromTo(arrow.current, {opacity:0, y:"-100%"}, {opacity: 1, y:0})
+    // tl.fromTo(arrow.current, {opacity:0, y:"-100%"}, {opacity: 1, y:0})
 
 
-  // },[])
+  },[])
 
   return (
       <>
