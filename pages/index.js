@@ -9,14 +9,17 @@ import FourthSection from '../components/main/FourthSection'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger)
+import { useInView } from 'react-intersection-observer';
 
 
 
 const Home = ({banner}) => {
+  const { ref: myRef, inView, entry } = useInView();
   const container = useRef(null)
   const mainPage = useRef(null)
   const nav = useRef(null)
   const secondPage = useRef(null)
+  console.log(entry)
 
   useEffect(() => {
  
@@ -38,7 +41,7 @@ const Home = ({banner}) => {
 
       }
   })
-  tlMain.to(nav.current, {opacity:0})
+  tlMain.fromTo(nav.current, {opacity:1}, {opacity: 0})
  
  
  
@@ -53,11 +56,12 @@ const Home = ({banner}) => {
       <div ref={nav} className='absolute navbar '>
       <Navbar />
       </div>  
-      <div ref={mainPage} className='relative bg-[#93g]'>  
+      <div  className='relative bg-[#93g]'>  
       <MainPage banner={banner.length && banner[0]} />
       </div>
-      <div ref={secondPage}>
-      <SecondSection />
+      <div ref={myRef} className='carousel-section ml-[7vw]' >
+     
+       <SecondSection />
       </div>
       <ThirdSection />
       <FourthSection />

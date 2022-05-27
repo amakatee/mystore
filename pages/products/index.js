@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef,useEffect} from 'react'
 import NavbarDark from '../../components/NavbarDark'
 import ProductIcon from '../../components/products/ProductIcon'
 import Navigation from './../../components/products/Navigation'
@@ -6,11 +6,16 @@ import {client} from './../../lib/client'
 import InnerLayout from '../../components/InnerLayout'
 
 
+
+
 const Products = ({products}) => {
+
+  
     
   return (
     <>
     <InnerLayout>
+
     {products.map(product => <ProductIcon product={product} />)}
 
     </InnerLayout>

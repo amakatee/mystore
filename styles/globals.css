@@ -763,6 +763,10 @@ body {
 }
 
 @media(min-width: 45em){
+    .i-main-cont {
+        display: none;
+
+    }
     .navbar {
        
         padding: 1.2rem;
