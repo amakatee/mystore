@@ -1,17 +1,21 @@
 import React from 'react'
 import TitleArrow from '../assets/TitleArrow'
 import Link from 'next/link'
+import { urlFor } from '../../lib/client'
 import { useContext, useRef,useEffect } from 'react'
 import CartContext  from '../../context/StateContext'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger)
-const MainPage = () => {
+
+
+const MainPage = ({banner}) => {
   const {} = useContext(CartContext)
   const titleBox = useRef(null)
   const mainPage = useRef(null)
   const arrow = useRef(null)
   const video = useRef(null)
+  console.log(banner.image)
 
 
   useEffect (() => {
@@ -19,10 +23,11 @@ const MainPage = () => {
     const tl = gsap.timeline({
       defaults:{ duration: .75, ease:"Power3.easeOut"},
      })
-     tl.fromTo(video.current, {opacity:0}, {opacity: 1, delay: 1})
-
-    tl.fromTo(titleBox.current, {opacity:0, y:"-100%"}, {opacity: 1, y:0, delay: 1.1})
+     tl.fromTo(titleBox.current, {opacity:0, y:"-100%"}, {opacity: 1, y:0, delay: .5})
     tl.fromTo(arrow.current, {opacity:0, y:"-100%"}, {opacity: 1, y:0})
+     tl.fromTo(video.current, {opacity:0}, {opacity: 1, duration:.5, delay: .1})
+
+    
 
 
   },[])
@@ -38,7 +43,7 @@ const MainPage = () => {
         <img src='https://images.pexels.com/photos/2009972/pexels-photo-2009972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'></img>
       </div>
       <div className='absolute w-[100vw] h-[100vh]'>
-        <img className='w-[100%] h-[100%] object-cover'  src='backimg.JPG'></img>
+        <img className='w-[100%] h-[100%] object-cover'  src={urlFor(banner.image)}></img>
       </div>
         <div ref={video} className='video-container'>
           <video loop={true} muted={true} autoPlay={true} playsInline controls={false} className="video-main">
@@ -69,3 +74,5 @@ const MainPage = () => {
 }
 
 export default MainPage
+
+

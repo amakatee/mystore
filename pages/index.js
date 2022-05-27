@@ -1,5 +1,6 @@
 import React, {useRef, useEffect} from 'react'
 import Navbar from '../components/Navbar'
+import { client } from '../lib/client'
 import MainPage from '../components/main/MainPage' 
 import SecondSection from '../components/main/SecondSection'
 import ThirdSection from '../components/main/ThirdSection'
@@ -11,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 
 
-const Home = () => {
+const Home = ({banner}) => {
   const container = useRef(null)
   const mainPage = useRef(null)
   const navbar = useRef(null)
@@ -44,7 +45,7 @@ const Home = () => {
       <Navbar />
       </div>  
       <div ref={mainPage} >
-      <MainPage />
+      <MainPage banner={banner.length && banner[0]} />
       </div>
       <div ref={secondPage}>
       <SecondSection />
@@ -60,5 +61,16 @@ const Home = () => {
     </div>
   )
 }
+export const getServerSideProps = async () => {
+  const query = '*[_type == "banner"]'
+  const banner = await client.fetch(query)
+ 
+
+  return {
+    props: {banner}
+  }
+
+}
+
 
 export default Home
