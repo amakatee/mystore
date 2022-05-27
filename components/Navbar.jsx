@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <>
-    <div ref={nav} className='absolute navbar '>
+    {/* <div ref={nav} className='absolute navbar '> */}
             <div className='nabvar-content'>
                 
               
@@ -54,7 +54,7 @@ const Navbar = () => {
 
             
       
-    </div>
+
   
      </> 
   )

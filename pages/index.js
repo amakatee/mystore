@@ -15,29 +15,30 @@ gsap.registerPlugin(ScrollTrigger)
 const Home = ({banner}) => {
   const container = useRef(null)
   const mainPage = useRef(null)
-  const navbar = useRef(null)
+  const nav = useRef(null)
   const secondPage = useRef(null)
 
   useEffect(() => {
  
     
 
-      // gsap.fromTo(navbar.current, {y:'-100%', opacity:0 } , 
-      // {y:'0%' , opacity: 1, duration:.5, delay: .5, ease: "power3.out"})
+      gsap.fromTo(nav.current, {y:'-100%', opacity:0 } , 
+      {y:'0%' , opacity: 1, duration:.5, delay: .5, ease: "power3.out"})
   
   
  
-  //   const tlMain = gsap.timeline({
-  //     ScrollTrigger: {
-  //       trigger: mainPage.current,
-  //       start: "0%",
-  //       end: "100%",
-  //       markers: true,
-  //       scrub:true,
-  //       pin: true,
+    const tlMain = gsap.timeline({
+      ScrollTrigger: {
+        trigger: mainPage.current,
+        start: "10%",
+      
+        markers: true,
+        scrub:true,
+       
 
-  //     }
-  // })
+      }
+  })
+  tlMain.to(nav.current, {opacity:0})
  
  
  
@@ -49,10 +50,10 @@ const Home = ({banner}) => {
      
 
       <div ref={container} className="w-[100vw] min-h-[100vh]">
-      <section  ref={navbar} className='bg-[#fff]h-[10vh] w-[100vw]'>
+      <div ref={nav} className='absolute navbar '>
       <Navbar />
-      </section>  
-      <div ref={mainPage} >
+      </div>  
+      <div ref={mainPage} className='relative bg-[#93g]'>  
       <MainPage banner={banner.length && banner[0]} />
       </div>
       <div ref={secondPage}>

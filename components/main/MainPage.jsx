@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger)
 const MainPage = ({banner}) => {
   const {} = useContext(CartContext)
   const titleBox = useRef(null)
-  const mainPage = useRef(null)
+
   const arrow = useRef(null)
   const video = useRef(null)
   console.log(banner.image)
@@ -39,7 +39,7 @@ const MainPage = ({banner}) => {
 
 
   return (
-    <div ref={mainPage} className='relative'>  
+     <>
       <div className='image-main-container'>
         <img src='https://images.pexels.com/photos/2009972/pexels-photo-2009972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'></img>
       </div>
@@ -70,7 +70,8 @@ const MainPage = ({banner}) => {
            
         </div>
         </Link>
-        </div>
+        </>
+       
   )
 }
 
