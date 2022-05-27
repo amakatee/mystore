@@ -6,9 +6,8 @@ import { useContext } from 'react'
 import CartContext from '../context/StateContext'
 
 const NavbarDark = () => {
-  const [sideBar, setSideBar ] = useState(false)
-  const [shoppingCart, setShoppingCart] = useState(false)
-  const {cartItems } = useContext(CartContext)
+
+  const {cartItems,setSideBar, sideBar,shoppingCart, setShoppingCart } = useContext(CartContext)
   return (
     <div className='absolute navbar-dark '>
     <div className='nabvar-content'>

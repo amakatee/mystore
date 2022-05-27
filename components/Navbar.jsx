@@ -8,9 +8,8 @@ import gsap from 'gsap/dist/gsap'
 const Navbar = () => {
 
   const nav = useRef()
-  const [sideBar, setSideBar ] = useState(false)
-  const [shoppingCart, setShoppingCart] = useState(false)
-  const {cartItems} = useContext(CartContext)
+ 
+  const {cartItems, setSideBar, sideBar,shoppingCart, setShoppingCart} = useContext(CartContext)
 
   // useEffect(() => {
     

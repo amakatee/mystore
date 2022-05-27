@@ -23,7 +23,7 @@ const MainPage = ({banner}) => {
     const tl = gsap.timeline({
       defaults:{ ease:"Power3.easeOut"},
      })
-     tl.fromTo(video.current, {opacity:0}, {opacity: 1, duration:.3})
+     tl.fromTo(video.current, {opacity:0}, {opacity: 1})
      tl.fromTo(titleBox.current, {opacity:0, y:"-100%"}, {opacity: 1, y:0, delay: .4})
      tl.fromTo(arrow.current, {opacity:0, y:"-100%"}, {opacity: 1, y:0})
     

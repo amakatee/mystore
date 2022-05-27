@@ -4,14 +4,21 @@ import { urlFor } from '../../lib/client'
 import CartContext from './../../context/StateContext'
 
 const SingleDesc = ({product , products}) => {
-    const {sizeValue, setSizeValue, setColorValue, addTocart, colorValue} = useContext(CartContext)
+    const {sizeValue, setSizeValue, setColorValue, addTocart, colorValue, setShoppingCart} = useContext(CartContext)
     const [bottomDesc1, setBottomDesc1] = useState(false)
     const [bottomDesc2, setBottomDesc2] = useState(false)
 
 
     const {image, price, color,size, details, title, fabric, fabricDesc, measures, measuresDesc, slug} = product
 
- 
+
+    const onAdd = (product, colorValue, sizeValue) => {
+        addTocart( product, colorValue, sizeValue)
+        setShoppingCart(true)
+
+    }
+   
+    const onSave = sizeValue && colorValue
 
 
   return (
@@ -50,7 +57,7 @@ const SingleDesc = ({product , products}) => {
 
 
         <div className='desc-buttons mb-[2rem]'>
-            <button onClick={() => addTocart( product, colorValue, sizeValue)} className='add-to-cart-btn'>В корзину</button>
+            <button disabled={!onSave} onClick={() =>onAdd(product, colorValue, sizeValue)} className='add-to-cart-btn'>В корзину</button>
       
         </div>
 

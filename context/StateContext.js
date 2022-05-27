@@ -4,6 +4,8 @@ import {client} from './../lib/client'
 const CartContext = createContext()
 
 export const StateContext = ({children}) => {
+    const [sideBar, setSideBar ] = useState(false)
+    const [shoppingCart, setShoppingCart] = useState(false)
 
     const [colorValue, setColorValue] = useState()
     const [sizeValue, setSizeValue] = useState()
@@ -72,7 +74,11 @@ export const StateContext = ({children}) => {
             addTocart,
             jewelry,
             shoes,
-            clothing
+            clothing,
+            setSideBar, 
+            sideBar,
+            shoppingCart, 
+            setShoppingCart
 
         }}
         >

@@ -6,8 +6,8 @@ import CartContext from '../context/StateContext'
 import { useContext } from 'react'
 
 const ProductMobileNav = () => {
-  const [shoppingCart, setShoppingCart] = useState(false)
-  const {cartItems} = useContext(CartContext)
+
+  const {cartItems, shoppingCart, setShoppingCart} = useContext(CartContext)
   return (
     <div className='absolute navbar-mobile '>
     <div className='nabvar-content'>

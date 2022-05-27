@@ -14,7 +14,7 @@ const ShoppingCartMini = ({setShoppingCart}) => {
 
 
   return (
-    <div ref={shoppingCart} className='shoppingCart-mini absolute w-[100%] top-0 right-0 h-[100vh]  bg-white mt-[-1rem]'> 
+    <div ref={shoppingCart} className='shoppingCart-mini absolute w-[100%] top-0 right-0 h-[101vh]   bg-white mt-[-1rem]'> 
     <div className='mx-auto w-[80%] pt-[4rem] desctop-cont'>
     <div className='sc-header flex items-center justify-between  pb-[1.5rem] ' >
        <GrClose size={15} onClick={() => setShoppingCart(false) } />
