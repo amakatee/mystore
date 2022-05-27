@@ -227,8 +227,24 @@ body {
     position: relative;
  
 }
+.i-main-cont {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+
+}
+.i-main-cont img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
 .video-main {
     position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transform: scale(1.3);
 }
 .braclet-video-cont {
