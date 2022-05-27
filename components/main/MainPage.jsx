@@ -10,6 +10,7 @@ const MainPage = () => {
   const titleBox = useRef()
   const mainPage = useRef()
   const arrow = useRef()
+  const video = useRef(video)
 
 
   useEffect (() => {
@@ -17,7 +18,8 @@ const MainPage = () => {
     const tl = gsap.timeline({
       defaults:{ duration: .75, ease:"Power3.easeOut"},
      })
-    
+     tl.fromTo(video.current, {opacity:0}, {opacity: 1})
+
     tl.fromTo(titleBox.current, {opacity:0, y:"-100%"}, {opacity: 1, y:0, delay: 1.1})
     tl.fromTo(arrow.current, {opacity:0, y:"-100%"}, {opacity: 1, y:0})
 
@@ -34,7 +36,10 @@ const MainPage = () => {
       <div className='image-main-container'>
         <img src='https://images.pexels.com/photos/2009972/pexels-photo-2009972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'></img>
       </div>
-        <div className='video-container'>
+      <div className='absolute w-[100vw] h-[100vh]'>
+        <img className='w-[100%] h-[100%] object-cover'  src='backimg.JPG'></img>
+      </div>
+        <div ref={video} className='video-container'>
           <video loop={true} muted={true} autoPlay={true} playsInline controls={false} className="video-main">
             <source
             src='/backvideo.mp4'

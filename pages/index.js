@@ -11,10 +11,11 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 
 const Home = () => {
-  const mainPage = useRef()
-  const navbar = useRef()
-  const secondPage = useRef()
-  const body = useRef()
+  const container = useRef(null)
+  const mainPage = useRef(null)
+  const navbar = useRef(null)
+  const secondPage = useRef(null)
+
   useEffect(() => {
     const tlMain = gsap.timeline({
       ScrollTrigger: {
@@ -37,7 +38,7 @@ const Home = () => {
     <div>
      
 
-      <main ref={body} className="w-[100vw] min-h-[100vh]">
+      <div ref={container} className="w-[100vw] min-h-[100vh]">
       <div  ref={navbar} >
       <Navbar />
       </div>  
@@ -51,7 +52,7 @@ const Home = () => {
       <FourthSection />
        
     
-      </main>
+      </div>
 
   
       
