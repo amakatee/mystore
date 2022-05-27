@@ -1,14 +1,20 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import {GrClose} from 'react-icons/gr'
 import ShoppingCartItem from './../shoppingCart/ShoppingCartItem'
 import CartContext from '../../context/StateContext'
 import { useContext } from 'react'
+import gsap from 'gsap/dist/gsap'
 
 const ShoppingCartMini = ({setShoppingCart}) => {
     const {cartItems, totalPrice} = useContext(CartContext)
+    const shoppingCart = useRef()
+    useEffect(() => {
+        gsap.fromTo(shoppingCart.current, {x:200} , {x:0,  duration:.8})
+    })
+
 
   return (
-    <div className='shoppingCart-mini absolute w-[100%] top-0 right-0 h-[100vh]  bg-white mt-[-1rem]'> 
+    <div ref={shoppingCart} className='shoppingCart-mini absolute w-[100%] top-0 right-0 h-[100vh]  bg-white mt-[-1rem]'> 
     <div className='mx-auto w-[80%] pt-[4rem] desctop-cont'>
     <div className='sc-header flex items-center justify-between  pb-[1.5rem] ' >
        <GrClose size={15} onClick={() => setShoppingCart(false) } />
