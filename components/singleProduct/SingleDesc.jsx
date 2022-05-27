@@ -4,7 +4,7 @@ import { urlFor } from '../../lib/client'
 import CartContext from './../../context/StateContext'
 
 const SingleDesc = ({product , products}) => {
-    const {sizeValue, setSizeValue, setColorValue, addTocart, colorValue, setShoppingCart} = useContext(CartContext)
+    const {sizeValue, setSizeValue, setColorValue, addTocart, colorValue, shoppingCart,setShoppingCart} = useContext(CartContext)
     const [bottomDesc1, setBottomDesc1] = useState(false)
     const [bottomDesc2, setBottomDesc2] = useState(false)
 
@@ -23,7 +23,7 @@ const SingleDesc = ({product , products}) => {
 
   return (
     <>
-    <div  className=' single-desc'>
+    <div  className={shoppingCart ? ' single-desc abs-z' : ' single-desc'}>
        <div className='desc-header mb-[2rem]'>
             <h2 className='desc-title'>{title}</h2>
             <p className='desc-price'>₽ {price}</p>
@@ -36,7 +36,7 @@ const SingleDesc = ({product , products}) => {
                 <h4 className='color-size-title'> Цвет: <span className=''>{colorValue}</span> </h4>
                 <div className='flex gap-2 color-icons'>
                     {color.map(c => (
-                        <div key={c} onClick={() => setColorValue(color)} className={ colorValue === c ? 'color-icon color-active bg-[#fff0] ' :'color-icon  bg-[#fff0] '}>
+                        <div key={c} onClick={() => setColorValue(c)} className={ colorValue === c ? 'color-icon color-active bg-[#fff0] ' :'color-icon  bg-[#fff0] '}>
                             <img className='rounded-full  w-[20px] h-[20px]  ' src={urlFor(image[0])}></img>
                         </div>
 

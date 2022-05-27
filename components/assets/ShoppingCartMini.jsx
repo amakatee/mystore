@@ -4,15 +4,21 @@ import ShoppingCartItem from './../shoppingCart/ShoppingCartItem'
 import CartContext from '../../context/StateContext'
 import { useContext } from 'react'
 import gsap from 'gsap/dist/gsap'
+import { useRouter } from 'next/router'
 
 const ShoppingCartMini = ({setShoppingCart}) => {
+    const router = useRouter()
     const {cartItems, totalPrice} = useContext(CartContext)
     const shoppingCart = useRef()
     useEffect(() => {
         gsap.fromTo(shoppingCart.current, {x:200} , {x:0,  duration:.8})
     })
+  
+     const tocheckout = (path) => {
+         router.push(path)
+        setShoppingCart(false)
 
-
+     }
   return (
     <div ref={shoppingCart} className='shoppingCart-mini absolute w-[100%] top-0 right-0 h-[101vh]   bg-white mt-[-1rem]'> 
     <div className='mx-auto w-[80%] pt-[4rem] desctop-cont'>
@@ -42,9 +48,10 @@ const ShoppingCartMini = ({setShoppingCart}) => {
             <p>P {totalPrice}</p>
         </div>
         <div className='grid content-center'>
-            <button className='checkout-btn'>
+     <button onClick={() => tocheckout('/checkout')}  className='checkout-btn'>
                 Перейти к оплате
             </button>
+       
         </div>
     </div>
 

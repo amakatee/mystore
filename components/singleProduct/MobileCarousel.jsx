@@ -26,9 +26,9 @@ const MobileCarousel = ({images}) => {
     },[])
     
   return (
-    <div >
+    <div className=''>
        
-        <motion.div ref={carousel} className= 'relative mobile-single-img'>
+        <motion.div ref={carousel} className= 'relative mobile-single-img '>
             <motion.div className='mobile-images-slider relati' 
             drag="y"
             dragConstraints={{ bottom: 0 , top: -height}}

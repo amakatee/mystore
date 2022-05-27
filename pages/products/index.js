@@ -10,13 +10,18 @@ import InnerLayout from '../../components/InnerLayout'
 
 const Products = ({products}) => {
 
+  const slugs = products.map(p => p.slug.current)
+  const filteredSlugs = [...new Set(slugs)]
+  const filteredProducts = filteredSlugs.map(slug => {
+    return products.find(p => p.slug.current === slug)
+  })
   
     
   return (
     <>
     <InnerLayout>
 
-    {products.map(product => <ProductIcon product={product} />)}
+    {filteredProducts.map(product => <ProductIcon product={product} />)}
 
     </InnerLayout>
     </>
