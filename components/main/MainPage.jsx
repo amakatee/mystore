@@ -23,10 +23,10 @@ const MainPage = ({banner}) => {
     const tl = gsap.timeline({
       defaults:{ ease:"Power3.easeOut"},
      })
-     tl.fromTo(video.current, {opacity:0}, {opacity: 1, duration:.3})
-
+    //  tl.fromTo(video.current, {opacity:0}, {opacity: 1, duration:.3, delay: .1})
      tl.fromTo(titleBox.current, {opacity:0, y:"-100%"}, {opacity: 1, y:0, delay: .6})
     tl.fromTo(arrow.current, {opacity:0, y:"-100%"}, {opacity: 1, y:0})
+    
 
     
 
@@ -43,7 +43,7 @@ const MainPage = ({banner}) => {
       <div className='image-main-container'>
         <img src='https://images.pexels.com/photos/2009972/pexels-photo-2009972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'></img>
       </div>
-      {/* <div className='absolute w-[100vw] h-[100vh]'>
+      {/* <div className='absolute w-[100vw] max-h-[100vh] overflow-hidden'>
         <img className='w-[100%] h-[100%] object-cover'  src={urlFor(banner.image)}></img>
       </div> */}
         <div ref={video} className='video-container'>
