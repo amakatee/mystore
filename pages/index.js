@@ -49,9 +49,9 @@ const Home = ({banner}) => {
      
 
       <div ref={container} className="w-[100vw] min-h-[100vh]">
-      <div  ref={navbar} className='bg-[#fff]'>
+      <section  ref={navbar} className='bg-[#fff]h-[10vh] w-[100vw]'>
       <Navbar />
-      </div>  
+      </section>  
       <div ref={mainPage} >
       <MainPage banner={banner.length && banner[0]} />
       </div>
