@@ -19,17 +19,25 @@ const Home = ({banner}) => {
   const secondPage = useRef(null)
 
   useEffect(() => {
-    const tlMain = gsap.timeline({
-      ScrollTrigger: {
-        trigger: mainPage.current,
-        start: "0%",
-        end: "100%",
-        markers: true,
-        scrub:true,
-        pin: true,
+ 
+    
 
-      }
-  })
+      gsap.fromTo(navbar.current, {y:'-100%', opacity:0 } , 
+      {y:'0%' , opacity: 1, duration:.5, delay: .5, ease: "power3.out"})
+  
+  
+ 
+  //   const tlMain = gsap.timeline({
+  //     ScrollTrigger: {
+  //       trigger: mainPage.current,
+  //       start: "0%",
+  //       end: "100%",
+  //       markers: true,
+  //       scrub:true,
+  //       pin: true,
+
+  //     }
+  // })
  
  
  

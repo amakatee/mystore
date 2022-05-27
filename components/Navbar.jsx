@@ -12,14 +12,14 @@ const Navbar = () => {
   const [shoppingCart, setShoppingCart] = useState(false)
   const {cartItems} = useContext(CartContext)
 
-  useEffect(() => {
+  // useEffect(() => {
     
 
-    gsap.fromTo(nav.current, {y:'-100%', opacity:0 } , 
-    {y:'0%' , opacity: 1, duration:.5, delay: .5, ease: "power3.out"})
+  //   gsap.fromTo(nav.current, {y:'-100%', opacity:0 } , 
+  //   {y:'0%' , opacity: 1, duration:.5, delay: .5, ease: "power3.out"})
 
 
-  })
+  // })
 
 
 
