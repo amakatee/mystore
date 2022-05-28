@@ -20,7 +20,7 @@ const ShoppingCartMini = ({setShoppingCart}) => {
 
      }
   return (
-    <div ref={shoppingCart} className='shoppingCart-mini absolute w-[100%] top-0 right-0 h-[101vh]   bg-white mt-[-1rem]'> 
+    <div ref={shoppingCart} className='shoppingCart-mini absolute w-[100%] top-0 right-0 h-[101vh] z-13  bg-white mt-[-1rem]'> 
     <div className='mx-auto w-[80%] pt-[4rem] desctop-cont'>
     <div className='sc-header flex items-center justify-between  pb-[1.5rem] ' >
        <GrClose size={15} onClick={() => setShoppingCart(false) } />
@@ -48,7 +48,7 @@ const ShoppingCartMini = ({setShoppingCart}) => {
             <p>P {totalPrice}</p>
         </div>
         <div className='grid content-center'>
-     <button onClick={() => tocheckout('/checkout')}  className='checkout-btn'>
+     <button onClick={() => cartItems.length >= 1 ? tocheckout('/checkout') : alert("Корзина пуста")}  className='checkout-btn'>
                 Перейти к оплате
             </button>
        

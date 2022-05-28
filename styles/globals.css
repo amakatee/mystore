@@ -768,6 +768,12 @@ body {
 }
 
 @media(min-width: 45em){
+    .desktop-form {
+        flex-direction: row ;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 18rem;
+    }
     .i-main-cont {
         display: none;
 
@@ -914,6 +920,8 @@ body {
     .carousel-main-img {
         width: 27rem;
        aspect-ratio: 1/1.4;
+       overflow: hidden;
+
     }
     .carousel-icon-img {
         display: flex;
@@ -923,7 +931,8 @@ body {
     }
      .icon-image {
          width: 4rem;
-         aspect-ratio: 1/1.4;
+         aspect-ratio: 1/1.5;
+         overflow: hidden;
 
     }
      .icon-image img{
@@ -965,6 +974,8 @@ body {
      min-height: 10rem;
      max-height: 15rem;
      overflow: scroll;
+     margin-bottom: 5rem;
+
  }
  .input-style {
      border: 1px solid rgb(211, 210, 210);
@@ -974,7 +985,7 @@ body {
      color: #434343;
      font-size: 1rem;
      letter-spacing: .4px;
-     margin-left: 4px;
+     outline: none;
 
  }
  .label-style {
@@ -994,10 +1005,26 @@ body {
  }
 .checkout-btn-next {
     width: 100%;
-    border: 1px solid #434343;
+    border: 1px solid #434343c9;
     padding: .7em;
     font-size: .9rem;
+    font-weight: 250;
     text-transform: uppercase;
     letter-spacing: .3px;
     margin-top: 1rem;
 }
+.address-title {
+    font-weight: 300;
+    letter-spacing: .3px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 1.3rem;
+
+}
+
+/* .check-total {
+    padding-block: 1rem;
+    position: absolute;
+   background-color: white;
+   
+} */

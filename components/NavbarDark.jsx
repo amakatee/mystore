@@ -32,7 +32,10 @@ const NavbarDark = () => {
               <SideBar setSideBar={setSideBar} />
        }
        {shoppingCart && 
+       <>
        <ShoppingCartMini setShoppingCart={setShoppingCart} />
+       <div  className=' z-[-1] absolute w-[100vw] h-[101vh] top-[-1rem] left-0 bg-[#1a19184b]' onClick={() => setShoppingCart(false)} ></div>
+       </>
       }
 </div>
   )
