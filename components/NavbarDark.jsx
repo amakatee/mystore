@@ -8,6 +8,9 @@ import CartContext from '../context/StateContext'
 const NavbarDark = () => {
 
   const {cartItems,setSideBar, sideBar,shoppingCart, setShoppingCart } = useContext(CartContext)
+  
+  
+  
   return (
     <div className='absolute navbar-dark '>
     <div className='nabvar-content'>

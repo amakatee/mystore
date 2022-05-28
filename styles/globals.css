@@ -110,7 +110,7 @@ body {
     padding: 30% 15%;
 }
 .menu-cont  > *{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: .3px;
     font-weight: 280;
@@ -979,7 +979,7 @@ body {
  }
  .input-style {
      border: 1px solid rgb(211, 210, 210);
-     padding: .4em .6em;
+     padding: .4em .9em;
 
   
      color: #434343;
@@ -991,7 +991,7 @@ body {
  }
  .label-style {
      text-transform: uppercase;
-     font-size: .7rem;
+     font-size: .5rem;
      letter-spacing: .2px;
      color: #434343;
      
@@ -1029,3 +1029,51 @@ body {
    background-color: white;
    
 } */
+
+.social-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+   letter-spacing: .3px;
+   font-weight: 300;
+   line-height: 1.5rem;
+   font-size: .9rem;
+   width: 90%;
+   margin: auto;
+}
+.social-section p {
+     font-size: .8rem;
+     width: 70%;
+     
+}
+
+.link-tele {
+    color: rgb(119, 167, 238);
+}
+
+.ship-cont {
+   
+    padding: 1rem;
+    
+}
+.ship-info-cont {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    margin: auto;
+    gap: 2rem;
+}
+.ship-cont h1 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 250;
+    letter-spacing: .7px;
+    margin-bottom: .5rem;
+
+}
+.ship-cont p {
+    font-size: .8rem;
+    font-size: 280;
+}

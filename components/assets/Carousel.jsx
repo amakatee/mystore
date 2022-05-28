@@ -51,7 +51,7 @@ const Carousel = ({images}) => {
                   </div>
                   
          </motion.div>
-         <motion.div className='main-item '>
+         <motion.div onClick={() => router.push('/products/product/braslet-nimfa')} className='main-item '>
                   <div  className='main-img-cont'>
                     
                       <video className="video" loop={true}  muted={true} autoPlay={true} playsInline controls={false}>
@@ -64,7 +64,7 @@ const Carousel = ({images}) => {
                   </div>
                   
          </motion.div>
-         <motion.div className='main-item '>
+         <motion.div onClick={() => router.push('/products/product/kolco-malenkii-oval')} className='main-item '>
                   <div  className='main-img-cont'>
                     
                       <video className="video" loop={true}  muted={true} autoPlay={true} playsInline controls={false}>
@@ -78,7 +78,7 @@ const Carousel = ({images}) => {
                   
          </motion.div>
      
-         <motion.div className='main-item '>
+         <motion.div onClick={() => router.push('/products/product/kolco-karma')} className='main-item '>
                   <div  className='main-img-cont'>
                     
                       <video className="video" loop={true}  muted={true} autoPlay={true} playsInline controls={false}>

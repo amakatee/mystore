@@ -27,7 +27,7 @@ const SideBar = ({setSideBar}) => {
     <GrClose size={27} className="absolute right-3 top-3"  onClick={() => setSideBar(false)} />
    <div className='menu-cont'>
    <div onClick={() => pushToPath('/products')}>Все товары</div>
-      <div>Украшения</div>
+      <div onClick={() => pushToPath('/shipping')}>Доставка и возврат</div>
       
     </div>
 
