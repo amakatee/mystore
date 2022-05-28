@@ -1,7 +1,6 @@
 import React from 'react'
 import NavbarDark from '../components/NavbarDark'
-import CheckoutcartItem from '../components/checkout/checkoutcartItem'
-import ShoppingCartItem from './../components/shoppingCart/ShoppingCartItem'
+
 import { useContext } from 'react'
 import CartContext from '../context/StateContext'
 
