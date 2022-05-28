@@ -9,6 +9,7 @@ import { useDrag } from '@use-gesture/react'
 import { client } from '../../../lib/client'
 import {PortableText} from '@portabletext/react'
 import gsap from 'gsap/dist/gsap'
+import Head from 'next/head'
 
 const ProductDetails = ({product, products}) => {
     
@@ -19,19 +20,14 @@ const ProductDetails = ({product, products}) => {
         gsap.fromTo(productRef.current, {opacity:0} , {opacity:1, duration: .95})
     })
   
-    // const descPos = useSpring({ y:0})
-    // const bindPosition = useDrag((params) => {
-    //    const y = params.xy[1]
-    //    if(y >= 0 ){
-    //     descPos.y.set(y)
-        
-
-    //    }
-       
-    // })
-
   return (
       <>
+      <Head>
+      <title>{product.title} - Иней</title>
+      <meta name="description" content={product.metadesc}/>
+        <meta propery="og:title" content='Серебряные украшения, одежда качества премиум.'></meta>
+        <meta name="keywords" content="Одежда платья обувь 2022 онлайн магазин  " />
+      </Head>
      
     <div ref={productRef} className=' width-[100vw] overflow-hidden '>
        

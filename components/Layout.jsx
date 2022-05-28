@@ -7,6 +7,7 @@ const Layout = ({children}) => {
     <Head>
     <title>Украшения из серебра - Иней</title>
     <meta name="description" content="Украшения из серебра , одежда и обувь 2022"/>
+    <meta propery="og:title" content='Серебряные украшения, одежда качества премиум.'></meta>
 
     <meta name="yandex-verification" content="16605cd7b1f8ebe2" />
     </Head>

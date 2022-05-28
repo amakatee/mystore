@@ -4,6 +4,7 @@ import ProductIcon from '../../components/products/ProductIcon'
 import Navigation from './../../components/products/Navigation'
 import {client} from './../../lib/client'
 import InnerLayout from '../../components/InnerLayout'
+import Head from 'next/head'
 
 
 
@@ -19,6 +20,13 @@ const Products = ({products}) => {
     
   return (
     <>
+    <Head>
+    <title>Украшения и одежда - Иней</title>
+        <meta name="description" content="Украшения из серебра с сияющими камниямиб муассанитыб кубический циркони, 2022 новинки"/>
+        <meta propery="og:title" content='Серебряные украшения, одежда качества премиум.'></meta>
+        <meta name="keywords" content="Одежда платья обувь 2022 онлайн магазин  " />
+      
+    </Head>
     <InnerLayout>
 
     {filteredProducts.map(product => <ProductIcon product={product} />)}
