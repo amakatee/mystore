@@ -19,7 +19,7 @@ const SingleCarousel = ({images}) => {
         </div>
         <div  className='carousel-icon-img'>
             {images.map((img, index) => (
-                <div  className='cursor-pointer icon-image' onClick={() => setCurrentImage(index)}>
+                <div key={img} className='cursor-pointer icon-image' onClick={() => setCurrentImage(index)}>
                     <img  src={urlFor(img)}></img>
                 </div>
             ))}

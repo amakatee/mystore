@@ -6,14 +6,14 @@ import ProductIcon from '../../components/products/ProductIcon'
 
 const shoes = () => {
     const {shoes} = useContext(CartContext)
-    const slugs = shoes.map(s => s.slug.current)
+    const slugs = shoes?.map(s => s.slug.current)
     const uniqSlug = [...new Set(slugs)]
     const filteredShoes = uniqSlug.map(slug => {
       return shoes.find(s => s.slug.current === slug)
     })
   return (
       <InnerLayout>
-      {filteredShoes.map(product => <ProductIcon product={product} />)}
+      {filteredShoes?.map(product => <ProductIcon product={product} />)}
     </InnerLayout>
   )
 }

@@ -980,12 +980,13 @@ body {
  .input-style {
      border: 1px solid rgb(211, 210, 210);
      padding: .4em .6em;
-     max-width: 20rem;
-     min-width: 15rem;
+
+  
      color: #434343;
      font-size: 1rem;
      letter-spacing: .4px;
      outline: none;
+     border-radius: none;
 
  }
  .label-style {

@@ -9,7 +9,7 @@ const jewelry = () => {
     
   return (
       <InnerLayout>
-      {jewelry.map(product => <ProductIcon product={product} />)}
+      {jewelry?.map(product => <ProductIcon product={product} />)}
     </InnerLayout>
   )
 }

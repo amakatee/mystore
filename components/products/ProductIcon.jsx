@@ -8,7 +8,7 @@ const ProductIcon = ({product}) => {
     <Link href={`/products/product/${product.slug.current}`}>
     <div  className="product-icon-cont">
         <div className='product-icon-img'>
-            <img src={urlFor(product.image[0])}></img>
+            <img src={urlFor(product?.image[0])}></img>
         </div>
         <div className='product-icon-desc'>
             <h2 className='product-icon-title'>{product.title}</h2>

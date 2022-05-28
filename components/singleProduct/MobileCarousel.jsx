@@ -37,7 +37,7 @@ const MobileCarousel = ({images}) => {
             
             >
                 {images.map((img, index) => (
-                    <div className='mobile-item-img'>
+                    <div key={img} className='mobile-item-img'>
                         <div className='mobile-single-img-cont'>
                             <img src={urlFor(img)}></img>
                         </div>
