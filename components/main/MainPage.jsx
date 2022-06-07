@@ -6,6 +6,7 @@ import { useContext, useRef,useEffect } from 'react'
 import CartContext  from '../../context/StateContext'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+
 gsap.registerPlugin(ScrollTrigger)
 
 

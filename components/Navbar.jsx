@@ -5,6 +5,7 @@ import { useContext } from 'react'
 import CartContext from '../context/StateContext'
 import gsap from 'gsap/dist/gsap'
 
+
 const Navbar = () => {
 
   const nav = useRef()

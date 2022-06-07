@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const FourthSection = () => {
   return (
-    <div className='min-h-[100vh] '>
+    <div className=''>
       <div className='fourth-padding'>
         <div className='fourh-grid'>
             <div className='fourth-img-cont-1'>

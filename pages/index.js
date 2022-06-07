@@ -59,7 +59,7 @@ const Home = ({banner}) => {
       <div  className='relative bg-[#93g]'>  
       <MainPage banner={banner.length && banner[0]} />
       </div>
-      <div ref={myRef} className='carousel-section ml-[7vw]' >
+      <div ref={myRef} className='carousel-section' >
      
        <SecondSection />
       </div>
