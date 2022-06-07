@@ -56,6 +56,7 @@ const Home = ({banner}) => {
       <div ref={nav} className='absolute navbar '>
       <Navbar />
       </div>  
+      <div className='pages-main'>
       <div  className='relative bg-[#93g]'>  
       <MainPage banner={banner.length && banner[0]} />
       </div>
@@ -65,7 +66,7 @@ const Home = ({banner}) => {
       </div>
       <ThirdSection />
       <FourthSection />
-       
+      </div>
     
       </div>
 
