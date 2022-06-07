@@ -41,8 +41,16 @@ const MainPage = ({banner}) => {
   return (
      <>
       <div className='image-main-container'>
-        <img src='https://images.pexels.com/photos/2009972/pexels-photo-2009972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'></img>
-      </div>
+        <div className='video-main-desktop'>
+        <video loop={true} muted={true} autoPlay={true} playsInline controls={false} className='vd-desk'>
+            <source
+            src='/backvideo.mp4'
+            type='video/mp4'
+            >
+            </source>
+          </video>
+          </div>
+                </div>
       <div className=' i-main-cont'>
         <img className=''  src={urlFor(banner.image)}></img>
       </div>
