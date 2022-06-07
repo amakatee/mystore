@@ -389,9 +389,9 @@ body {
         
     
      }
-     .single-product-carousel {
+     /* .single-product-carousel {
          display: none;
-     }
+     } */
      .single-desc {
         padding-top: 0%;
         display: flex;
@@ -1099,6 +1099,9 @@ body {
         font-weight: 280;
         margin-top: -1px;
     }
+    .single-product-carousel {
+        display: none;
+    }
     
     /*  Products Icon Ends*/
   
@@ -1108,6 +1111,14 @@ body {
     
 }
 @media only screen and (min-width : 690px) and (max-width : 1024px)  {
+    .mobile-single-carousel {
+        display: none;
+    }
+    .single-prod-flex {
+        display: flex;
+       flex-direction: column-reverse;
+   
+    }
     .pages-main {
         display: grid ;
         gap: 9rem;
