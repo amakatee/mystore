@@ -344,6 +344,7 @@ body {
 .product-icon-img {
     aspect-ratio: 1/1.5;
     cursor: pointer;
+    overflow: hidden;
 }
 .product-icon-img img{
     width: 100%;
@@ -483,7 +484,7 @@ body {
 /*Single Product Ends*/
 
 
-@media(max-width: 55em){
+@media(max-width: 45em){
     .image-main-container {
         display: none;
     }
@@ -518,11 +519,14 @@ body {
 }
     .main-img-cont {
      width: 13rem;
+     overflow: hidden;
+
    
    
 }
       .main-img-cont {
     width: 12rem;
+    overflow: hidden;
    
    
      }
@@ -767,7 +771,7 @@ body {
 
 }
 
-@media(min-width: 55em){
+@media(min-width: 45em){
     .desktop-form {
         flex-direction: row ;
         align-items: flex-start;
@@ -864,6 +868,7 @@ body {
     }
     .main-img-cont {
         width: 20rem;
+        overflow: hidden;
        
        
 
