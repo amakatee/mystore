@@ -483,7 +483,7 @@ body {
 /*Single Product Ends*/
 
 
-@media(max-width: 45em){
+@media(max-width: 55em){
     .image-main-container {
         display: none;
     }
@@ -767,7 +767,7 @@ body {
 
 }
 
-@media(min-width: 45em){
+@media(min-width: 55em){
     .desktop-form {
         flex-direction: row ;
         align-items: flex-start;
