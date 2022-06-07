@@ -1043,7 +1043,6 @@ body {
         width: 100vw;
         grid-template-columns: 1fr;
         padding-block: 5rem;
-        background-color: rgb(115, 255, 0);
 
        
     }
@@ -1145,7 +1144,6 @@ body {
         width: 100vw;
         grid-template-columns: 1fr;
         padding-block: 7rem;
-        background-color: rgb(255, 0, 119);
 
        
     }
@@ -1217,7 +1215,6 @@ body {
      .third-section {
         display: grid;
         width: 100vw;
-        background-color: blue;
         grid-template-columns: 1fr 1fr;
         padding-block: 7rem;
        
