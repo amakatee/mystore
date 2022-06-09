@@ -999,7 +999,7 @@ body {
     .nabvar-content {
         width: 100%;
       
-        padding-inline: 1rem;
+        padding-inline: .5rem;
         padding-block: .5rem;
     }
     .carousel-section {
@@ -1104,13 +1104,21 @@ body {
     }
     
     /*  Products Icon Ends*/
+    .navigation-text {
+        font-size: .68rem;
+        font-size: 300;
+        
+    }
   
    
 
    
     
 }
-@media only screen and (min-width : 690px) and (max-width : 1024px) and (orientation: portrait) {
+@media only screen 
+and (min-width : 690px) 
+and (max-width : 1024px) 
+and (orientation: portrait) {
     .mobile-single-carousel {
         display: none;
     }
