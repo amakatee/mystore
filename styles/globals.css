@@ -13,7 +13,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    aspect-ratio: 1/1;
+  
 
     pointer-events: none;
 }
@@ -1110,7 +1110,7 @@ body {
    
     
 }
-@media only screen and (min-width : 690px) and (max-width : 1024px)  {
+@media only screen and (min-width : 690px) and (max-width : 1024px), (orientation: portrait) {
     .mobile-single-carousel {
         display: none;
     }
@@ -1124,7 +1124,7 @@ body {
         gap: 9rem;
        
     }
-    .navbar{
+    .navbar, .navbar-dark{
      
         display: flex;
         align-items: center;
@@ -1147,6 +1147,7 @@ body {
         
         margin-bottom: 2rem;
         background-color: rgb(255, 255, 255);
+     
 
        
     }
@@ -1163,14 +1164,14 @@ body {
          width: 80vw;
          gap: 1rem;
         
+        
     }
-    .main-img-cont {
-        width: 20rem;
-        aspect-ratio: 1/1;
+   
+     .main-img-cont {
         overflow: hidden;
-       
-       
-     }
+        width: 20rem;
+        aspect-ratio: 1 /1; 
+    }
      .video {
          width: 100%;
          height: 100%;
@@ -1209,8 +1210,54 @@ body {
      
      
      }
-     
+       /* Products Icons*/
+    .products-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .products-area {
+       padding-block: 3.5rem;
+    }
+    .product-icon-desc {
+        padding-top: .5rem;
+        margin-left: .5rem;
 
+        
+    }
+    .product-icon-cont {
+        margin-bottom: 1.2rem;
+        overflow: hidden;
+    }
+    .product-icon-title {
+        font-size: .67rem;
+        letter-spacing: .5px;
+        font-weight: 350;
+        text-transform: uppercase;
+        margin-bottom: 3px;
+    }
+    .product-icon-price {
+        font-size: .69rem;
+        letter-spacing: .1px;
+        font-weight: 280;
+        margin-top: -1px;
+    }
+    .navigation-text  {
+        font-size: .8rem;
+
+    }
+
+  
+    
+    /*  Products Icon Ends*/
+    .desktop-form {
+       
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    }
+    
    
   
 
